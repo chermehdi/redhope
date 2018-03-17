@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	<html>
+<h:head>
+	<title>
+	<ui:insert name="title">
+		Red Hope		
+	</ui:insert>
+	</title>
+		<h:link
+			href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700'
+			rel='stylesheet' type='text/css' />
+		<h:link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" /> 
+		<h:outputStylesheet library="css" name="colors.css"></h:outputStylesheet> 
+		<h:outputStylesheet library="css" name="bootstrap.min.css">
+		</h:outputStylesheet> 
+		<h:outputStylesheet	library="css" name="paper-kit.css"></h:outputStylesheet>
+		<h:outputStylesheet	library="css" name="demo.css"></h:outputStylesheet>
+		<h:outputStylesheet library="css" name="red-hero.css"></h:outputStylesheet>
+		<h:outputStylesheet	library="css" name="animate.css"></h:outputStylesheet> 
+		<ui:insert name="stylesheet"></ui:insert>
+	
+</h:head>
+<h:body class="primary-background">
+	<nav class="navbar navbar-expand-lg fixed-top whiteBackground shadow">
+	<div class="container">
+		<div class="navbar-translate">
+			<a class="navbar-brand" id="brand">
+			<h:graphicImage class="logo" value="resources/img/logo.png"  />
+		    </a>
+			<button class="navbar-toggler navbar-toggler-right navbar-burger"
+				type="button" data-toggle="collapse" data-target="#navbarToggler"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-bar"></span> <span
+					class="navbar-toggler-bar"></span> <span class="navbar-toggler-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navbarToggler">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="#" target="_blank"
+					class="nav-link">About</a></li>
+				<li class="nav-item"><a href="#" id="services" class="nav-link">Services</a>
+				</li>
+				<li class="nav-item"><a href="signup-general.xhtml"
+					class="btn btn-round accent-background" style="border: none">Sign
+						in</a></li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+	<ui:insert name="content"></ui:insert>
+	<h:outputScript library="js" name="jquery-3.2.1.js"></h:outputScript>
+	<h:outputScript library="js" name="jquery-ui-1.12.1.custom.min.js"></h:outputScript>
+	<h:outputScript library="js" name="popper.js"></h:outputScript>
+	<h:outputScript library="js" name="bootstrap.min.js"></h:outputScript>
+	<h:outputScript library="js" name="bootstrap-switch.min.js"></h:outputScript>
+	<h:outputScript library="js" name="nouislider.js"></h:outputScript>
+	<h:outputScript library="js" name="moment.min.js"></h:outputScript>
+	<h:outputScript library="js" name="bootstrap-datetimepicker.min.js"></h:outputScript>
+	<h:outputScript library="js" name="paper-kit.js"></h:outputScript>	
+	<ui:insert name="scripts"></ui:insert>
+</h:body>
+	</html>
+
+</ui:composition>

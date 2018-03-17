@@ -1,0 +1,107 @@
+/**
+ * Landing section
+ */
+
+.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16), 0 2px 4px rgba(0, 0, 0, 0.23);
+}
+
+nav.navbar.navbar-expand-lg.fixed-top.shadow {
+    /*background-color: rgba(237, 37, 78, 1) !important;*/
+}
+.navbar-brand .logo {
+    width: 100px;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+    color: rgba(237, 37, 78, 1);
+}
+
+#brand {
+    color: white;
+}
+
+.blood-drop {
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4s;
+    position: relative;
+}
+
+/**
+ * Services Section
+ */
+.subHeader {
+    font-size: 1.5em;
+    margin-top: 5%;
+}
+
+.subHeader.slideInLeft {
+    animation-duration: .5s;
+}
+
+.wrappper {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+section.services, .service-container {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+.service-container.card {
+    background: #F7F4F8;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+.service-header {
+    padding-bottom: 1rem;
+}
+
+.service-header > h3 {
+    font-weight: 500;
+    margin: 0;
+}
+
+.image-container {
+    max-width: 100px;
+    width: 100px;
+    position: absolute;
+    padding-top: 1rem;
+    display: inline-block;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+#carousel {
+    min-height: 300px;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    transition: all .4s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+.image-container img.late {
+    animation: pulse-animation 2.5s;
+}
+
+/** hero animation **/
+@-webkit-keyframes pulse-animation {
+    10% {
+        box-shadow: 0 1px 2px rgba(199, 37, 74, 0.79), 0 1px 2px rgba(241, 37, 78, 0.5);
+    }
+    30% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 20px rgba(90, 153, 212, 0);
+    }
+}

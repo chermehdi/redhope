@@ -1,0 +1,37 @@
+
+.primaryText {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.secondaryText {
+    color: rgba(247, 244, 248, 1) !important;
+}
+
+.whiteBackground {
+    background-color: rgba(247, 244, 248, 1) !important;
+}
+
+.secondary {
+    color: rgba(52, 52, 50, 1) !important;
+}
+
+.secondary-background {
+    background-color: rgba(52, 52, 50, 1) !important;
+}
+
+.accent {
+    color: rgba(87, 83, 102, 1) !important;
+}
+
+.accent-background {
+    background-color: rgba(87, 83, 102, 1) !important;
+}
+
+.primary {
+    color: rgba(237, 37, 78, 1) !important;
+}
+
+.primary-background {
+    background-color: rgba(237, 37, 78, 1) !important;
+}
+

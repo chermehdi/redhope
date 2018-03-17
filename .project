@@ -40,6 +40,11 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
+		<buildCommand>
+			<name>org.hibernate.eclipse.console.hibernateBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
@@ -52,5 +57,6 @@
 		<nature>org.jboss.tools.jsf.jsfnature</nature>
 		<nature>org.jboss.tools.ws.jaxrs.nature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+		<nature>org.hibernate.eclipse.console.hibernateNature</nature>
 	</natures>
 </projectDescription>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="templates/layout.xhtml">
+		<ui:define name="stylesheet">
+			<h:outputStylesheet library="css" name="signup.css"></h:outputStylesheet>
+		</ui:define>
+		<ui:define name="title">Signup Individual</ui:define>
+		<ui:define name="content">
+			<div class="container wrapper card-no-transition">
+    <div class="column first">
+      <div class="logo"> 
+          <ui:include src="resources/img/blood-drop.svg" />
+      </div>
+      <div class="container form">
+        <div class="row">
+          <div class="col-md-12">
+              <h2 class="header-text">Get Your Free Account !</h2>
+              <h4 class="subheader-text">help save lives </h4>      
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h:form action="#">
+              <div class="form-group">
+                <label for="name">First Name: </label>
+                <h:inputText id="name" class="form-control" placehoder="First Name" value="#{authentication.userDto.firstName}" />
+              </div>
+              <div class="form-group">
+                  <label for="lastName">Last Name: </label>
+                  
+                <h:inputText id="lastName" class="form-control" placehoder="Last Name" value="#{authentication.userDto.lastName}" />
+              </div>
+              <div class="form-group">
+                  <label for="email">Email : </label>
+                  <h:inputText id="email" class="form-control" placehoder="Email" value="#{authentication.userDto.email}" />
+              </div>
+              <div class="form-group">
+                  <label for="password">Password : </label>
+                  <h:inputSecret id="password" class="form-control" placehoder="Password" value="#{authentication.userDto.password}"/>
+              </div>
+              <div class="form-group">
+                <h:commandButton action="#{authentication.signup}" value="Create Your Account" class="btn btn-success card-no-transition no-border primary-background primaryText"/>
+              </div>
+            </h:form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column second">
+      <div class="caption-container">
+          <h1 class="header-text primaryText">In RedHope We Help you so you can save lives .</h1>
+      </div>
+    </div>
+  </div>
+		</ui:define>
+	</ui:composition>
+</html>

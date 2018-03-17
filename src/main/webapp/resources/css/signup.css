@@ -1,0 +1,75 @@
+@charset "UTF-8";
+ .card-no-transition {
+      border-radius: 12px;
+      box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+      background-color: #FFFFFF;
+      color: #333333;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      min-height: 600px;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding-top: 3rem;
+      background-color: #F7F4F8;
+    }
+    .container.wrapper {
+      display: flex;
+      padding-right: 0;
+      flex-wrap: wrap;
+
+    }
+    .container.form {
+      padding-top: 3rem;
+    }
+    .column {
+      width:50%;
+      min-width: 300px;
+    }
+    .column.first {
+      position: relative;
+      padding: 4rem;
+
+    }
+    .column.first .logo svg {
+      width: 50px;
+      position: absolute;
+      top: 2rem;
+      left: 0;
+    }
+
+    .caption-container {
+      padding: 1rem 1rem;
+      text-align: center;
+      margin-top: 10rem;
+    }
+    .column.second {
+      z-index: 100;
+      position: relative;
+      border-bottom-right-radius: 12px;
+      border-top-right-radius: 12px;
+
+      background-color: #575366;  
+    }
+    .column.second .header-text {
+     font-weight: 400;
+    }
+    .subheader-text {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.1em;
+    }
+    .no-border {
+      border: none;
+    }
+    .logo svg path {
+      fill: rgba(237, 37, 78, 1);
+    }

@@ -5,4 +5,8 @@ import com.mql.redhope.models.User;
 public interface UserDao extends AbstractDao<User> {
 
   User findByEmail(String email);
+
+  User findByToken(String token);
+
+  User update(User user);
 }

@@ -12,5 +12,6 @@ public class EmailValidator implements Validator {
       throws ValidatorException {
     // TODO: add validation logic
     // email should not exist in the database
+    System.out.println("validator invoked " + value);
   }
 }

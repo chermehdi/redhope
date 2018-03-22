@@ -2,18 +2,27 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html">
 
 <ui:composition template="templates/layout.xhtml">
     <ui:define name="stylesheet">
         <h:outputStylesheet library="css" name="signup.css"></h:outputStylesheet>
+        <style type="text/css">
+            .logo img {
+                max-width: 64px;
+                position: absolute;
+                top: 79px;
+                left: -1px;
+            }
+        </style>
     </ui:define>
     <ui:define name="title">Signup Individual</ui:define>
     <ui:define name="content">
         <div class="container wrapper card-no-transition">
             <div class="column first">
                 <div class="logo">
-                    <ui:include src="resources/img/blood-drop.svg"/>
+                    <h:graphicImage value="resources/img/blood-drop.png"/>
                 </div>
                 <div class="container form">
                     <div class="row">
@@ -23,6 +32,10 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-12">
+                            <h:messages errorClass="err" style="color: red"
+                                        globalOnly="true"></h:messages>
+                        </div>
                         <div class="col-md-12">
                             <h:form action="#">
                                 <div class="form-group">
@@ -41,7 +54,9 @@
                                 <div class="form-group">
                                     <label for="email">Email : </label>
                                     <h:inputText id="email" class="form-control" placehoder="Email"
-                                                 value="#{authentication.userDto.email}"/>
+                                                 value="#{authentication.userDto.email}">
+                                        <f:validator validatorId="email"/>
+                                    </h:inputText>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password : </label>

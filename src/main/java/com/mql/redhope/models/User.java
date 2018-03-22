@@ -24,20 +24,26 @@ public class User implements Serializable {
 
   private Date createdAt;
 
+  private Boolean isActive;
+
   @ManyToMany(fetch = FetchType.EAGER)
   private Set<Role> roles;
 
   @OneToOne
   private Profile profile;
 
-  public User() {
+  @OneToOne
+  private Token token;
 
+  public User() {
+    isActive = false;
   }
 
   public User(String email, String password) {
     this.email = email;
     this.password = password;
     this.createdAt = new Date();
+    isActive = false;
   }
 
   public Long getId() {
@@ -86,6 +92,22 @@ public class User implements Serializable {
 
   public void setProfile(Profile profile) {
     this.profile = profile;
+  }
+
+  public Token getToken() {
+    return token;
+  }
+
+  public void setToken(Token token) {
+    this.token = token;
+  }
+
+  public Boolean getActive() {
+    return isActive;
+  }
+
+  public void setActive(Boolean active) {
+    isActive = active;
   }
 
   @Override

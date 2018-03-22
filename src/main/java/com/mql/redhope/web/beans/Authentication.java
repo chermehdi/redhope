@@ -25,17 +25,18 @@ public class Authentication implements Serializable {
   }
 
   public void signup() {
-    System.out.println("current suer information are " + userDto);
+    // TODO: send email to validate user account
     User user = userService.signup(userDto);
-    System.out.println("the saved user is " + user);
   }
 
-  public void login() {
-    System.out.println("current suer information are " + userDto);
+  public String login() {
+    System.out.println("current user information are " + userDto);
     User user = userService.login(userDto.getEmail(), userDto.getPassword());
+    if (user == null) {
+      return "login-ind?faces-redirect=true";
+    }
     FacesContext context = FacesContext.getCurrentInstance();
-    System.out.println(context.getExternalContext().getSessionMap());
-    System.out.println("the saved user is " + user);
+    return "user-dashboard";
   }
 
   public UserDto getUserDto() {

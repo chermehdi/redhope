@@ -70,4 +70,26 @@ public class UserDaoImp implements UserDao {
     }
   }
 
+  @Override
+  public User findByToken(String token) {
+    try {
+      TypedQuery<User> query = em
+          .createQuery("SELECT u from User u WHERE u.token.value=:token", User.class);
+      query.setParameter("token", token);
+      return query.getSingleResult();
+    } catch (Exception e) {
+      System.out.println("could not find the user identified by token " + token);
+      return null;
+    }
+  }
+
+  @Override
+  public User update(User user) {
+    try {
+      return em.merge(user);
+    } catch (Exception e) {
+      return null;
+    }
+  }
+
 }

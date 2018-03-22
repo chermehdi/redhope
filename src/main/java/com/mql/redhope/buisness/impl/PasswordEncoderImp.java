@@ -1,5 +1,6 @@
-package com.mql.redhope.buisness;
+package com.mql.redhope.buisness.impl;
 
+import com.mql.redhope.buisness.PasswordEncoder;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

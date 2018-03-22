@@ -18,4 +18,10 @@ public interface UserService {
    * returns null
    */
   User signup(UserDto userDto);
+
+  /**
+   * activates the account of the user identified by the given token returns true if it succeeds
+   * false if not
+   */
+  boolean activateAccount(String token);
 }

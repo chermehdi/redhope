@@ -1,10 +1,11 @@
-package com.mql.redhope.dao;
+package com.mql.redhope.dao.impl;
 
+import com.mql.redhope.dao.RoleDao;
+import com.mql.redhope.models.Role;
 import java.util.List;
-import java.util.function.Predicate;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import com.mql.redhope.models.Role;
+import javax.persistence.TypedQuery;
 
 public class RoleDaoImp implements RoleDao {
   
@@ -34,9 +35,11 @@ public class RoleDaoImp implements RoleDao {
   }
 
   @Override
-  public List<Role> findByCriteria(Predicate<Role> p) {
-    
-    return null;
+  public Role findByName(String name) {
+    TypedQuery<Role> query = em
+        .createQuery("SELECT r FROM Role r WHERE r.roleName=:name", Role.class);
+    query.setParameter("name", name);
+    return query.getSingleResult();
   }
 
 }

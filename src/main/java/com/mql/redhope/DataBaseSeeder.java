@@ -1,15 +1,15 @@
 package com.mql.redhope;
 
+import com.mql.redhope.dao.RoleDao;
+import com.mql.redhope.dao.UserDao;
+import com.mql.redhope.models.Role;
+import com.mql.redhope.models.User;
 import java.util.Arrays;
 import java.util.HashSet;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Inject;
-import com.mql.redhope.dao.RoleDao;
-import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.models.Role;
-import com.mql.redhope.models.User;
 
 @Singleton
 @Startup
@@ -26,6 +26,6 @@ public class DataBaseSeeder {
     Role role = new Role("USER");
     roleDao.save(role);
     u.setRoles(new HashSet<>(Arrays.asList(role)));
-    userDao.save(u);
+    //  userDao.save(u);
   }
 }

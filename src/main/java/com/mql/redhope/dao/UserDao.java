@@ -9,4 +9,6 @@ public interface UserDao extends AbstractDao<User> {
   User findByToken(String token);
 
   User update(User user);
+
+  User findAndUpdateByToken(String token);
 }

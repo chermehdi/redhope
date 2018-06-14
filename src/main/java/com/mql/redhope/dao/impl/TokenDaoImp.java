@@ -25,7 +25,7 @@ public class TokenDaoImp implements TokenDao {
   @Override
   public List<Token> findAll() {
     try {
-      return em.createQuery("SELECT t FROM Token t").getResultList();
+      return em.createQuery("SELECT t FROM Token t", Token.class).getResultList();
     } catch (Exception e) {
       return Collections.emptyList();
     }

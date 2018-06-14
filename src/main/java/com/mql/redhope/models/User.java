@@ -4,14 +4,22 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class User implements Serializable {
 
   @Id
@@ -33,7 +41,12 @@ public class User implements Serializable {
   private Profile profile;
 
   @OneToOne
+  @XmlTransient
   private Token token;
+
+  @ManyToOne
+  @XmlTransient
+  private Region region;
 
   public User() {
     isActive = false;
@@ -110,6 +123,14 @@ public class User implements Serializable {
     isActive = active;
   }
 
+  public Region getRegion() {
+    return region;
+  }
+
+  public void setRegion(Region region) {
+    this.region = region;
+  }
+
   @Override
   public String toString() {
     return "User{" +
@@ -119,7 +140,11 @@ public class User implements Serializable {
         ", createdAt=" + createdAt +
         ", roles=" + roles +
         ", profile=" + profile +
+        ", isActive=" + isActive +
+        ", role=" + roles +
+        ", region=" + region +
         '}';
   }
+
 }
 

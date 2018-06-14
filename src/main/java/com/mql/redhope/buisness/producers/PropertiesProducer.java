@@ -15,6 +15,10 @@ import javax.enterprise.inject.spi.InjectionPoint;
 @Dependent
 public class PropertiesProducer {
 
+  /**
+   * produces the properties coming from the properties file defined in the injection point by
+   * default it retrieves the mail-config.properties file see {UserProperties}
+   */
   @Produces
   @UserProperties
   public Properties getMailProperties(InjectionPoint ip) {

@@ -42,19 +42,19 @@
                                     <label for="name">First Name: </label>
                                     <h:inputText id="name" class="form-control"
                                                  placehoder="First Name"
-                                                 value="#{authentication.userDto.firstName}"/>
+                                                 value="#{userAuthentication.userDto.firstName}"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="lastName">Last Name: </label>
 
                                     <h:inputText id="lastName" class="form-control"
                                                  placehoder="Last Name"
-                                                 value="#{authentication.userDto.lastName}"/>
+                                                 value="#{userAuthentication.userDto.lastName}"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email : </label>
                                     <h:inputText id="email" class="form-control" placehoder="Email"
-                                                 value="#{authentication.userDto.email}">
+                                                 value="#{userAuthentication.userDto.email}">
                                         <f:validator validatorId="email"/>
                                     </h:inputText>
                                 </div>
@@ -62,10 +62,10 @@
                                     <label for="password">Password : </label>
                                     <h:inputSecret id="password" class="form-control"
                                                    placehoder="Password"
-                                                   value="#{authentication.userDto.password}"/>
+                                                   value="#{userAuthentication.userDto.password}"/>
                                 </div>
                                 <div class="form-group">
-                                    <h:commandButton action="#{authentication.signup}"
+                                    <h:commandButton action="#{userAuthentication.signup}"
                                                      value="Create Your Account"
                                                      class="btn btn-success card-no-transition no-border primary-background primaryText"/>
                                     <h:commandLink action="login-ind"

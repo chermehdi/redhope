@@ -1,33 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
-<html>
-<h:head>
-<title>
-	<ui:insert name="title">
-		Red Hope		
-	</ui:insert>
-</title>
-	<h:link
-			href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700'
-			rel='stylesheet' type='text/css' />
-		<h:link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" /> 
-		<h:outputStylesheet library="css" name="colors.css"></h:outputStylesheet> 
-		<h:outputStylesheet library="css" name="bootstrap.min.css">
-		</h:outputStylesheet> 
-		<h:outputStylesheet	library="css" name="paper-kit.css"></h:outputStylesheet>
-		<h:outputStylesheet	library="css" name="demo.css"></h:outputStylesheet>
-		<h:outputStylesheet	library="css" name="animate.css"></h:outputStylesheet> 
-	<ui:insert name="stylesheet"></ui:insert>
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <html>
+    <h:head>
+        <title>
+            <ui:insert name="title">
+                Red Hope
+            </ui:insert>
+        </title>
+        <h:link
+                href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700'
+                rel='stylesheet' type='text/css'/>
+        <h:link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+                rel="stylesheet"/>
+        <h:outputStylesheet library="css" name="colors.css"></h:outputStylesheet>
+        <h:outputStylesheet library="css" name="bootstrap.min.css">
+        </h:outputStylesheet>
+        <h:outputStylesheet library="css" name="paper-kit.css"></h:outputStylesheet>
+        <h:outputStylesheet library="css" name="demo.css"></h:outputStylesheet>
+        <h:outputStylesheet library="css" name="animate.css"></h:outputStylesheet>
+        <ui:insert name="stylesheet"></ui:insert>
 
-</h:head>
+    </h:head>
 
-<h:body>
-	<ui:insert name="content"></ui:insert>
-	<ui:insert name="scripts"></ui:insert>
-</h:body>
-</html>
+    <h:body>
+        <ui:insert name="content"></ui:insert>
+        <h:outputScript library="js" name="jquery-3.2.1.js" />
+        <ui:insert name=
+                           "scripts"></ui:insert>
+    </h:body>
+    </html>
 
 </ui:composition>

@@ -47,10 +47,6 @@ public class AuthenticationFilter implements Filter {
     boolean isSignupRequest = requestUrl.equals(redirectUrl) ||
         requestUrl.equals(hospitalSingnupRoute) || requestUrl.equals(individualSingnupRoute);
     if (isResourceRequest || isLoginRequest || isSessionSet || isHomePage || isSignupRequest) {
-
-      System.out.println("request url " + requestUrl);
-      System.out.println("signup " + individualSingnupRoute);
-
       chain.doFilter(request, response);
     } else {
       httpResponse.sendRedirect(redirectUrl);

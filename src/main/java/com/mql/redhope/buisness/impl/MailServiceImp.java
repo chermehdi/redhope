@@ -6,6 +6,8 @@ import com.mql.redhope.dao.TokenDao;
 import com.mql.redhope.dao.UserDao;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.enterprise.concurrent.ManagedExecutorService;
@@ -17,6 +19,8 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MailServiceImp implements MailService {
 
@@ -34,6 +38,8 @@ public class MailServiceImp implements MailService {
 
   @Resource
   private ManagedExecutorService executorService;
+
+  Logger log = LoggerFactory.getLogger(getClass());
 
   @PostConstruct
   private void init() {
@@ -57,8 +63,9 @@ public class MailServiceImp implements MailService {
 
   @Override
   public void sendMail(String email, String body) {
-    executorService.submit(() -> {
+    this.executorService.submit(() -> {
       try {
+        log.info("ending email validation to user " + email);
         Transport.send(createMessage(email, "Account Validation", body, session));
       } catch (UnsupportedEncodingException | MessagingException e) {
         e.printStackTrace();

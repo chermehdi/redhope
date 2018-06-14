@@ -1,0 +1,4 @@
+
+gsquid:UselessImportCheck"9Remove this unused import 'javax.persistence.Enumerated'.(¡ùşßûÿÿÿÿ8üÇ’Ğ¾,
+Csquid:S1948"'Make "roles" transient or serializable.(öö¤8üÇ’Ğ¾,
+Dsquid:S1948"(Make "region" transient or serializable.(ïš×‘8üÇ’Ğ¾,

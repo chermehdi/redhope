@@ -1,0 +1,94 @@
+.__container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+svg {
+  max-width: 90%;
+  max-height: 80%;
+  z-index: 1000;
+  position: relative;
+}
+
+path {
+  stroke: white;
+  stroke-width: 3px;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+path.show {
+  fill: rgba(237, 37, 78, 1);
+  transform: translateY(-2%);
+}
+
+.dimmer {
+  transition: all 1s ease;
+  background: rgba(52, 52, 50, 1) !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.city {
+  color: white;
+  z-index: 1010;
+  font-size: 3em;
+  bottom: 15%;
+  right: 5%;
+  position: absolute;
+  transform: translateX(-1500px);
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.city.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fadeOut {
+  animation: fadeOut 1s cubic-bezier(.56, .5, .35, 1.01);
+  animation-fill-mode: forwards;
+}
+
+.region__name {
+  font-weight: bold;
+}
+
+.people__table {
+  width: 100%;
+}
+
+.people__table__head td {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.people__table td {
+  text-align: center;
+}
+
+/**
+ * animation definitions
+ */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

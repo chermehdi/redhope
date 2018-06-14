@@ -15,10 +15,14 @@ import com.mql.redhope.models.User;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.UUID;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CompletableFuture;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class UserServiceImp implements UserService {
 
@@ -40,9 +44,14 @@ public class UserServiceImp implements UserService {
   @Inject
   MailService mailService;
 
+  @Inject
+  Logger log;
+
   @Override
   public User login(String email, String password) {
     User user = userDao.findByEmail(email);
+
+    log.info("User trying to login {0}", user);
     FacesContext context = FacesContext.getCurrentInstance();
     if (user != null && !user.getActive()) {
       context.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,
@@ -50,15 +59,14 @@ public class UserServiceImp implements UserService {
       return null;
     }
     // TODO: add error messaging
-    if (user != null) {
-      if (user.getPassword().equals(encoder.encode(password))) {
-        // TODO: set session values and direct to dashboard
-        context.getExternalContext().getSessionMap().put("user", user);
-        context.addMessage(null,
-            new FacesMessage(FacesMessage.SEVERITY_ERROR, "logging successful", null));
-        return user;
-      }
+    if (user != null && user.getPassword().equals(encoder.encode(password))) {
+      // TODO: set session values and direct to dashboard
+      context.getExternalContext().getSessionMap().put("user", user);
+      context.addMessage(null,
+          new FacesMessage(FacesMessage.SEVERITY_ERROR, "logging successful", null));
+      return user;
     }
+
     FacesContext.getCurrentInstance()
         .addMessage(null, new FacesMessage("email or password not working"));
     return null;
@@ -89,10 +97,11 @@ public class UserServiceImp implements UserService {
     try {
       User user = userDao.findByToken(token);
       user.setActive(true);
-      userDao.update(user);
+      user = userDao.update(user);
+      log.info("The user {0}", user);
       return true;
     } catch (Exception e) {
-      System.out.println("could not activate the user account");
+      log.error("could not activate the user account " + e.getMessage());
       return false;
     }
   }
@@ -113,10 +122,6 @@ public class UserServiceImp implements UserService {
   }
 
   private void setProfile(UserDto userDto, User user) {
-    Profile profile = new Profile();
-    profile.setFirstName(userDto.getFirstName());
-    profile.setLastName(userDto.getLastName());
-    profileDao.save(profile);
-    user.setProfile(profile);
+
   }
 }

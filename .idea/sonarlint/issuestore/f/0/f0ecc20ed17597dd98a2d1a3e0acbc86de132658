@@ -1,0 +1,6 @@
+
+psquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(É«ŠW
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ùÎÞòÿÿÿÿÿ
+Lsquid:S2629"7Use the built-in formatting to construct this argument.(ÿûÂÐ
+Lsquid:S2629"7Use the built-in formatting to construct this argument.(ñ­Ç¶

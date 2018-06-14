@@ -1,0 +1,12 @@
+
+Gsquid:S1989"&Add a "try/catch" block for "process".(¡âÊ–ýÿÿÿÿ8ýÇ’Ð¾,
+[squid:S1161":Add the "@Override" annotation above this method signature(‚¨žíþÿÿÿÿ8ýÇ’Ð¾,
+Gsquid:S1989"&Add a "try/catch" block for "process".(¡âÊ–ýÿÿÿÿ8ýÇ’Ð¾,
+¬%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(ýù±8ýÇ’Ð¾,
+_squid:S1854">Remove this useless assignment to local variable "regionName".(È‚Ú•þÿÿÿÿ8ýÇ’Ð¾,
+Zsquid:UselessImportCheck",Remove this unused import 'javax.json.Json'.(™³Æçþÿÿÿÿ8ýÇ’Ð¾,
+Gsquid:S1989"&Add a "try/catch" block for "process".(¡âÊ–ýÿÿÿÿ8ýÇ’Ð¾,
+Psquid:S1481"/Remove this unused "regionName" local variable.(È‚Ú•þÿÿÿÿ8ýÇ’Ð¾,
+Vsquid:S1161":Add the "@Override" annotation above this method signature(çŽØß8ýÇ’Ð¾,
+gsquid:UselessImportCheck"9Remove this unused import 'javax.json.JsonObjectBuilder'.(†˜§­ùÿÿÿÿ8ýÇ’Ð¾,
+Gsquid:S1989"&Add a "try/catch" block for "process".(¡âÊ–ýÿÿÿÿ8ýÇ’Ð¾,

@@ -1,0 +1,9 @@
+
+Csquid:S1948")Make "userDto" transient or serializable.(¿šÇ‹üÿÿÿÿ
+Qsquid:S2629"7Use the built-in formatting to construct this argument.(ÎÓÈÀúÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Şî´Èûÿÿÿÿ
+Rsquid:S1854"8Remove this useless assignment to local variable "user".(ıÏ«æşÿÿÿÿ
+:squid:S1948"%Make "log" transient or serializable.(õÄ”¿
+Csquid:S1481")Remove this unused "user" local variable.(ıÏ«æşÿÿÿÿ
+Gsquid:S1135"2Complete the task associated to this TODO comment.(Ì·Ÿ’

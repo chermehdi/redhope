@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="templates/layout.xhtml">
+    <ui:define name="stylesheet">
+        <h:outputStylesheet library="css" name="admin.css"></h:outputStylesheet>
+    </ui:define>
+    <ui:define name="content">
+        <div class="container card">
+            <div class="row">
+                <h1>List of People for Region <span class="region__name"></span></h1>
+            </div>
+            <div class="row">
+                <div id="app">
+
+                </div>
+            </div>
+        </div>
+    </ui:define>
+    <ui:define name="scripts">
+        <h:outputScript library="js" name="map.js"/>
+        <h:outputScript library="js" name="vue.js"/>
+        <h:outputScript library="js" name="table.js"/>
+    </ui:define>
+</ui:composition>
+</html>

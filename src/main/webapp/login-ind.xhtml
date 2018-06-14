@@ -28,16 +28,16 @@
                                 <div class="form-group">
                                     <label for="email">Email : </label>
                                     <h:inputText id="email" class="form-control" placehoder="Email"
-                                                 value="#{authentication.userDto.email}"/>
+                                                 value="#{userAuthentication.userDto.email}"/>
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password : </label>
                                     <h:inputSecret id="password" class="form-control"
                                                    placehoder="Password"
-                                                   value="#{authentication.userDto.password}"/>
+                                                   value="#{userAuthentication.userDto.password}"/>
                                 </div>
                                 <div class="form-group">
-                                    <h:commandButton action="#{authentication.login}"
+                                    <h:commandButton action="#{userAuthentication.login}"
                                                      value="Login"
                                                      class="btn btn-success card-no-transition no-border primary-background primaryText"/>
                                 </div>

@@ -1,6 +1,6 @@
 
+isquid:UselessImportCheck";Remove this unused import 'java.util.concurrent.Executors'.(äåÒÛÿÿÿÿÿ8ıÇ’Ğ¾,
+osquid:UselessImportCheck"ARemove this unused import 'java.util.concurrent.ExecutorService'.(æ÷–£ùÿÿÿÿ8ıÇ’Ğ¾,
 Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ıÇ’Ğ¾,
 Vsquid:S1161":Add the "@Override" annotation above this method signature(‡èú×8ıÇ’Ğ¾,
-osquid:UselessImportCheck"ARemove this unused import 'java.util.concurrent.ExecutorService'.(æ÷–£ùÿÿÿÿ8ıÇ’Ğ¾,
-isquid:UselessImportCheck";Remove this unused import 'java.util.concurrent.Executors'.(äåÒÛÿÿÿÿÿ8ıÇ’Ğ¾,
 ]squid:S3457"AFormat specifiers should be used instead of string concatenation.(³õœ8ÍÕÎÇ¿,

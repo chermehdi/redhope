@@ -20,10 +20,10 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
-  <!--<context-param>
+  <context-param>
     <param-name>javax.faces.PROJECT_STAGE</param-name>
     <param-value>Development</param-value>
-  </context-param> -->
+  </context-param>
 
   <!-- filter declarations -->
 

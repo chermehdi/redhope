@@ -1,9 +1,13 @@
 
-]squid:UselessImportCheck"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8ˆ—ª,
+fsquid:UselessImportCheck"8Remove this unused import 'com.mql.redhope.models.Role'.(‡ÉÆıÿÿÿÿ8´±Ÿß¿,
+]squid:UnusedPrivateMethod"3Remove this unused private "createNewToken" method.(«Š¨‹8´±Ÿß¿,
+Ssquid:S1135"2Complete the task associated to this TODO comment.(şøâ¥ÿÿÿÿÿ8ÇÂ«ß¿,
 lsquid:UselessImportCheck"CRemove this unused import 'java.util.concurrent.CompletableFuture'.(ôŞä´8¤Åª,
-dsquid:UselessImportCheck";Remove this unused import 'com.mql.redhope.models.Profile'.(Ïï‚8½€¤ª,
-Ssquid:S1135"2Complete the task associated to this TODO comment.(¡›±‘ÿÿÿÿÿ8¤Åª,
-Ssquid:S1135"2Complete the task associated to this TODO comment.(“ÒÛèûÿÿÿÿ8¤Åª,
+bsquid:S3457"AFormat specifiers should be used instead of string concatenation.(ÁİŠ”şÿÿÿÿ8®É÷Ş¿,
+jsquid:UselessImportCheck"ARemove this unused import 'javax.faces.application.FacesMessage'.(Ø–÷Ì8´±Ÿß¿,
 hsquid:UselessImportCheck":Remove this unused import 'java.util.concurrent.Callable'.(¾×¶îûÿÿÿÿ8¤Åª,
-¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(òİìşÿÿÿÿ8½€¤ª,
-Gsquid:S1172"&Remove these unused method parameters.(òİìşÿÿÿÿ8½€¤ª,
+bsquid:UnusedPrivateMethod"3Remove this unused private "createHtmlMail" method.(òàõ»şÿÿÿÿ8´±Ÿß¿,
+]squid:UselessImportCheck"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8ˆ—ª,
+Vsquid:UselessImportCheck".Remove this unused import 'java.util.HashSet'.(Ê‚êX8´±Ÿß¿,
+[squid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8´±Ÿß¿,
+Fsquid:S3457"%String contains no format specifiers.(œÀÕÅüÿÿÿÿ8®É÷Ş¿,

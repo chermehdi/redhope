@@ -1,4 +1,5 @@
 
-gsquid:UselessImportCheck"9Remove this unused import 'javax.persistence.Enumerated'.(¡ùşßûÿÿÿÿ8üÇ’Ğ¾,
 Csquid:S1948"'Make "roles" transient or serializable.(öö¤8üÇ’Ğ¾,
+gsquid:UselessImportCheck"9Remove this unused import 'javax.persistence.Enumerated'.(¡ùşßûÿÿÿÿ8üÇ’Ğ¾,
 Dsquid:S1948"(Make "region" transient or serializable.(ïš×‘8üÇ’Ğ¾,
+asquid:UselessImportCheck"8Remove this unused import 'com.mql.redhope.dto.UserDto'.(•âÎ 8ğ÷£ß¿,

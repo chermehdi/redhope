@@ -1,6 +1,6 @@
 
-Zsquid:UselessImportCheck",Remove this unused import 'javax.json.Json'.(™³Æçşÿÿÿÿ8üÇ’Ğ¾,
-gsquid:UselessImportCheck"9Remove this unused import 'javax.json.JsonObjectBuilder'.(†˜§­ùÿÿÿÿ8üÇ’Ğ¾,
-asquid:UselessImportCheck"8Remove this unused import 'javax.json.JsonArrayBuilder'.(Ø¾“Ö8üÇ’Ğ¾,
-xsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(úÚõÚ8üÇ’Ğ¾,
-ysquid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "users".(ªøà¬8üÇ’Ğ¾,
+ysquid:S1488"]Immediately return this expression instead of assigning it to the temporary variable "users".(ªøà¬8ú¯ß¿,
+xsquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "user".(úÚõÚ8ú¯ß¿,
+asquid:UselessImportCheck"8Remove this unused import 'javax.json.JsonArrayBuilder'.(Ø¾“Ö8ú¯ß¿,
+Zsquid:UselessImportCheck",Remove this unused import 'javax.json.Json'.(™³Æçşÿÿÿÿ8ú¯ß¿,
+gsquid:UselessImportCheck"9Remove this unused import 'javax.json.JsonObjectBuilder'.(†˜§­ùÿÿÿÿ8ú¯ß¿,

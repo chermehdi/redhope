@@ -6,11 +6,25 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 >
 <ui:composition template="templates/nav-layout.xhtml">
+    <ui:define name="stylesheet">
+        <h:outputStylesheet library="css" value="dashboard.css"/>
+    </ui:define>
     <ui:define name="content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 style="color: white;">The Connected User is #{session.getAttribute("user").email}</h1>
+            <div class="row mgt">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card__title">
+                            <h2>Update Your Profile Information</h2>
+                        </div>
+                        <div class="card__content">
+                            <p>Complete Your User Profile Information, add your address, your phone number so we can easily contact you !</p>
+                        </div>
+                        <div class="card__action">
+                            <a href="/redhope/faces/user-update-profile.xhtml"
+                               class="btn btn-primary">Update </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.( èÏãÿÿÿÿÿ8üÇ’Ğ¾,
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¥Ìç8üÇ’Ğ¾,
 Ssquid:S2629"7Use the built-in formatting to construct this argument.(œÓ†è8üÇ’Ğ¾,
 ]squid:S3457"AFormat specifiers should be used instead of string concatenation.(œÓ†è8ÌÕÎÇ¿,
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(¥Ìç8üÇ’Ğ¾,
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.( èÏãÿÿÿÿÿ8üÇ’Ğ¾,

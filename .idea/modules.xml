@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/redhope.iml" filepath="$PROJECT_DIR$/redhope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-ui/user-ui.iml" filepath="$PROJECT_DIR$/user-ui/user-ui.iml" />
     </modules>
   </component>
 </project>

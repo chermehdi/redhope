@@ -2,15 +2,18 @@ package com.mql.redhope;
 
 import com.github.javafaker.Faker;
 import com.mql.redhope.buisness.PasswordEncoder;
+import com.mql.redhope.dao.DonationDao;
 import com.mql.redhope.dao.ProfileDao;
 import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.RoleDao;
 import com.mql.redhope.dao.UserDao;
 import com.mql.redhope.models.BloodType;
+import com.mql.redhope.models.Donation;
 import com.mql.redhope.models.Profile;
 import com.mql.redhope.models.Region;
 import com.mql.redhope.models.Role;
 import com.mql.redhope.models.User;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -41,6 +44,9 @@ public class DataBaseSeeder {
 
   @Inject
   RegionDao regionDao;
+
+  @Inject
+  DonationDao donationDao;
 
   @Inject
   Logger logger;
@@ -74,6 +80,11 @@ public class DataBaseSeeder {
     rabat.setName("Rabat");
     rabat.getUsers().add(u);
     u.setRegion(r);
+    Donation donation = new Donation(LocalDateTime.now().minusMonths(5));
+    regionDao.save(r);
+    donation.setRegion(r);
+    donationDao.save(donation);
+    u.getDonations().add(donation);
     userDao.save(u);
     logger.info("saving user " + u);
     fakeUsers.forEach(System.out::println);
@@ -85,7 +96,6 @@ public class DataBaseSeeder {
       rabat.getUsers().add(user);
       user.setRegion(rabat);
     }
-    regionDao.save(r);
     regionDao.save(rabat);
   }
 

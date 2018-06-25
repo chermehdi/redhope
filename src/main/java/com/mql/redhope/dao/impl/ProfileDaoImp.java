@@ -5,10 +5,12 @@ import com.mql.redhope.models.Profile;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
+@Stateless
 public class ProfileDaoImp implements ProfileDao {
 
   @PersistenceContext
@@ -54,5 +56,10 @@ public class ProfileDaoImp implements ProfileDao {
     } catch (Exception e) {
       return null;
     }
+  }
+
+  @Override
+  public Profile update(Profile profile) {
+    return em.merge(profile);
   }
 }

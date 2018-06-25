@@ -4,4 +4,5 @@ import com.mql.redhope.models.Profile;
 
 public interface ProfileDao extends AbstractDao<Profile> {
 
+  Profile update(Profile profile);
 }

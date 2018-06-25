@@ -12,7 +12,7 @@
                    class="form-control">
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-primary btn-round" value="Login">
+            <input type="submit" class="btn btn-primary btn-round white--text" value="Login">
             <router-link to="/signup" class="btn btn-success btn-round">Sign up</router-link>
           </div>
         </form>

@@ -19,7 +19,7 @@
                    class="form-control">
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-primary btn-round" value="Sign up">
+            <input type="submit" class="btn btn-primary btn-round text--white" value="Sign up">
           </div>
         </form>
       </div>

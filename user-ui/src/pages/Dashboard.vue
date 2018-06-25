@@ -20,7 +20,7 @@
             <img src="https://randomuser.me/api/portraits/men/85.jpg">
           </v-list-tile-avatar>
           <v-list-tile-content>
-            <v-list-tile-title>{{ email }}</v-list-tile-title>
+            <v-list-tile-title>{{ fullName }}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -36,6 +36,14 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
+    <v-snackbar
+      :timeout="3000"
+      :bottom="true"
+      :value="snackBarVisible"
+    >
+      {{ snackBarText }}
+      <v-btn flat color="pink" @click.native="hideSnackBar">Close</v-btn>
+    </v-snackbar>
   </v-layout>
 </template>
 <script>
@@ -63,10 +71,13 @@
       },
       navigate(to) {
         this.$router.push({path: to})
+      },
+      hideSnackBar() {
+        this.$store.commit('HIDE_SNACKBAR')
       }
     },
     computed: {
-      ...mapGetters(['email']),
+      ...mapGetters(['fullName', 'snackBarText', 'snackBarVisible']),
       router() {
         return this.$router
       }
@@ -76,8 +87,6 @@
   }
 </script>
 <style>
-  @import "../assets/css/vuetify.min.css";
-
   .table.datatable td, .table.datatable th {
     vertical-align: middle;
   }

@@ -2,7 +2,10 @@ package com.mql.redhope.models;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
+import java.util.Vector;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -10,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -36,7 +40,7 @@ public class User implements Serializable {
   @ManyToMany(fetch = FetchType.EAGER)
   private Set<Role> roles;
 
-  @OneToOne
+  @OneToOne(cascade = CascadeType.ALL)
   private Profile profile;
 
   @OneToOne
@@ -46,6 +50,10 @@ public class User implements Serializable {
   @ManyToOne
   @XmlTransient
   private Region region;
+
+  @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+  private Set<Donation> donations = new HashSet<>();
+
 
   public User() {
     isActive = false;
@@ -130,6 +138,14 @@ public class User implements Serializable {
     this.region = region;
   }
 
+  public Set<Donation> getDonations() {
+    return donations;
+  }
+
+  public void setDonations(Set<Donation> donations) {
+    this.donations = donations;
+  }
+
   @Override
   public String toString() {
     return "User{" +
@@ -144,6 +160,7 @@ public class User implements Serializable {
         ", region=" + region +
         '}';
   }
+
 
 }
 

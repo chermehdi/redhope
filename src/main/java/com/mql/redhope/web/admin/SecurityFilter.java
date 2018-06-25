@@ -12,6 +12,7 @@ import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.HttpHeaders;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
@@ -33,6 +34,8 @@ public class SecurityFilter implements ContainerRequestFilter {
 
   @Override
   public void filter(ContainerRequestContext requestContext) throws IOException {
+    MultivaluedMap<String, String> headers = requestContext.getHeaders();
+    headers.forEach((key, value) -> logger.info(key + "    " + value));
     String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
     logger.info("this is the authorization Header " + authorizationHeader);
     if (authorizationHeader == null) {
@@ -47,7 +50,6 @@ public class SecurityFilter implements ContainerRequestFilter {
           .parseClaimsJws(authorizationHeader)
           .getBody()
           .getSubject();
-      Jwts.parser().setSigningKey(key).parseClaimsJws(authorizationHeader);
 
       // create the request context object
       requestContext.setSecurityContext(new SecurityContext() {

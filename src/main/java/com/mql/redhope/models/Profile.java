@@ -1,6 +1,7 @@
 package com.mql.redhope.models;
 
 import java.io.Serializable;
+import java.util.Optional;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -30,7 +31,12 @@ public class Profile implements Serializable {
 
   private String address;
 
+  private boolean completed;
+
+  private boolean receiveEmails;
+
   public Profile() {
+    completed = false;
   }
 
   public Long getId() {
@@ -61,6 +67,18 @@ public class Profile implements Serializable {
     return type;
   }
 
+  public Optional<String> getOptionalAddress() {
+    return Optional.ofNullable(address);
+  }
+
+  public Optional<BloodType> getOptionalBloodType() {
+    return Optional.ofNullable(type);
+  }
+
+  public Optional<String> getOptionalPhone() {
+    return Optional.ofNullable(phone);
+  }
+
   public void setType(BloodType type) {
     this.type = type;
   }
@@ -79,5 +97,21 @@ public class Profile implements Serializable {
 
   public void setAddress(String address) {
     this.address = address;
+  }
+
+  public boolean isCompleted() {
+    return completed;
+  }
+
+  public void setCompleted(boolean completed) {
+    this.completed = completed;
+  }
+
+  public boolean isReceiveEmails() {
+    return receiveEmails;
+  }
+
+  public void setReceiveEmails(boolean receiveEmails) {
+    this.receiveEmails = receiveEmails;
   }
 }

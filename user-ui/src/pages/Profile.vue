@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="side"></div>
     <div class="content">
-      <v-stepper v-model="step">
+      <v-stepper v-model="step" v-if="!profileCompleted">
         <v-stepper-header>
           <v-stepper-step :complete="step > 1" step="1">Personal Information</v-stepper-step>
           <v-divider></v-divider>
@@ -68,6 +68,35 @@
           </v-stepper-content>
         </v-stepper-items>
       </v-stepper>
+      <div class="profile__container"  v-if="profileCompleted">
+        <v-card>
+          <v-card-title>
+            <h3>{{ (profile.firstName + ' ' + profile.lastName) | capitalize }}</h3>
+          </v-card-title>
+          <v-card-text>
+            <div class="profile__info">
+              <div class="profile__info__icon">
+                <v-icon color="primary">email</v-icon>
+              </div>
+              <div class="profile__info__value">
+                <p>{{ email }}</p>
+              </div>
+              <div class="profile__info__icon">
+                <v-icon color="primary">call</v-icon>
+              </div>
+              <div class="profile__info__value">
+                <p>{{ profile.phone}}</p>
+              </div>
+              <div class="profile__info__icon">
+                <v-icon color="primary">pin_drop</v-icon>
+              </div>
+              <div class="profile__info__value">
+                <p>{{ profile.address }}</p>
+              </div>
+            </div>
+          </v-card-text>
+        </v-card>
+      </div>
     </div>
     <div class="side"></div>
   </div>
@@ -101,7 +130,7 @@
       }
     },
     computed: {
-      ...mapGetters(['email', 'firstName', 'lastName'])
+      ...mapGetters(['email', 'firstName', 'lastName', 'profileCompleted', 'profile'])
     },
     methods: {
       ...mapActions(['updateProfile']),
@@ -121,6 +150,11 @@
     mounted() {
       this.personal.firstName = this.$store.getters.firstName
       this.personal.lastName = this.$store.getters.lastName
+    },
+    filters: {
+      capitalize(old) {
+        return old.split("-").map(e => e.toUpperCase()).join(" ")
+      }
     }
   }
 </script>
@@ -136,6 +170,24 @@
 
   .stepper {
     width: 100%;
+  }
+
+  .profile__info {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+  }
+
+  .profile__container {
+    margin: 0 auto;
+    min-width: 50%;
+  }
+
+  i.icon.material-icons {
+    font-size: 2.5rem;
+  }
+
+  .profile__info__value {
+    font-size: 1.4rem;
   }
 
   .small__grid {

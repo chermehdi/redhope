@@ -79,8 +79,7 @@ public class UserServiceImp implements UserService {
       user.setPassword(encoder.encode(userDto.getPassword()));
       user.setEmail(userDto.getEmail());
       user.setRoles(new HashSet<>(Arrays.asList(roleDao.findByName("USER"))));
-      user.setActive(
-          true); // todo: FOR THE TIME BEING ALL THE USERS ARE TREATED TO HAVE AN ACTIVE ACCOUNT
+      user.setActive(true); // todo: FOR THE TIME BEING ALL THE USERS ARE TREATED TO HAVE AN ACTIVE ACCOUNT
       user.setProfile(createProfileForUser(userDto));
       userDao.save(user);
       return user;

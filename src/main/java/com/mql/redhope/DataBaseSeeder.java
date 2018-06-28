@@ -19,15 +19,18 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
 import javax.inject.Inject;
 import org.slf4j.Logger;
 
-@Singleton
 @Startup
+@Singleton
 public class DataBaseSeeder {
 
   @Inject
@@ -51,52 +54,104 @@ public class DataBaseSeeder {
   @Inject
   Logger logger;
 
+  Faker faker = new Faker();
+
+  Random rnd = new Random();
+
   @PostConstruct
   public void init() {
-    logger.info("Database Seeder invoked ");
-    Faker faker = new Faker();
-    List<User> fakeUsers = createFakeUsers(faker);
-    List<User> fakeRabatUsers = createFakeUsers(faker);
-    System.out.println("Database Seeder called !");
-    User u = new User("mehdi.cheracher@gmail.com", encoder.encode("mehdi"));
-    u.setActive(true);
-    Role userRole = new Role("USER");
-    Role adminRole = new Role("ADMIN");
-    roleDao.save(adminRole);
-    roleDao.save(userRole);
-    u.setRoles(new HashSet<>(Arrays.asList(adminRole, userRole)));
-    Profile profile = new Profile();
-    profile.setFirstName("mehdi");
-    profile.setLastName("cheracher");
-    profile.setType(BloodType.A);
-    profile.setAddress("221B baker street");
-    profile.setPhone("+212-634411218");
-    profileDao.save(profile);
-    u.setProfile(profile);
-    Region r = new Region();
-    r.setName("Fes-Meknes");
-    r.getUsers().add(u);
-    Region rabat = new Region();
-    rabat.setName("Rabat");
-    rabat.getUsers().add(u);
-    u.setRegion(r);
-    Donation donation = new Donation(LocalDateTime.now().minusMonths(5));
-    regionDao.save(r);
-    donation.setRegion(r);
-    donationDao.save(donation);
-    u.getDonations().add(donation);
-    userDao.save(u);
-    logger.info("saving user " + u);
-    fakeUsers.forEach(System.out::println);
-    for (User user : fakeUsers) {
-      r.getUsers().add(user);
-      user.setRegion(r);
+    Set<Region> r = Stream.of("Fes-Meknes", "Rabat").map(Region::new)
+        .collect(Collectors.toSet());
+    List<Region> regions  = new ArrayList<>();
+    for(Region region: r) {
+      regionDao.save(region);
+      regions.add(region);
     }
-    for (User user : fakeRabatUsers) {
-      rabat.getUsers().add(user);
-      user.setRegion(rabat);
+    logger.info("the regions " + regions);
+    User admin = new User();
+    User donor = new User();
+    admin.setEmail("mehdi.cheracher@gmail.com");
+    donor.setEmail("mehdi@gmail.com");
+    admin.setActive(true);
+    donor.setActive(true);
+    admin.setPassword(encoder.encode("mehdi"));
+    donor.setPassword(encoder.encode("mehdi"));
+    Profile adminProfile = new Profile();
+    Profile donorProfile = new Profile();
+    adminProfile.setFirstName("mehdi");
+    donorProfile.setFirstName("mehdi");
+    adminProfile.setLastName("cheracher");
+    donorProfile.setLastName("cheracher");
+    adminProfile.setReceiveEmails(true);
+    adminProfile.setAddress("221B Baker street");
+    adminProfile.setType(BloodType.A);
+    adminProfile.setPhone("0634411218");
+    admin.setProfile(adminProfile);
+    donor.setProfile(donorProfile);
+    admin.setRoles(Stream.of("ADMIN", "USER").map(Role::new).collect(Collectors.toSet()));
+    donor.setRoles(Stream.of("USER").map(Role::new).collect(Collectors.toSet()));
+    System.out.println(regions);
+    admin.setRegion(regions.get(0));
+    donor.setRegion(regions.get(1));
+    userDao.save(admin);
+    userDao.save(donor);
+//    logger.info("Database Seeder invoked ");
+//    Faker faker = new Faker();
+//    List<User> fakeUsers = createFakeUsers(faker);
+//    List<User> fakeRabatUsers = createFakeUsers(faker);
+//    System.out.println("Database Seeder called !");
+//    User u = new User("mehdi.cheracher@gmail.com", encoder.encode("mehdi"));
+//    u.setActive(true);
+//    Role userRole = new Role("USER");
+//    Role adminRole = new Role("ADMIN");
+//    roleDao.save(adminRole);
+//    roleDao.save(userRole);
+//    u.setRoles(new HashSet<>(Arrays.asList(adminRole, userRole)));
+//    Profile profile = new Profile();
+//    profile.setFirstName("mehdi");
+//    profile.setLastName("cheracher");
+//    profile.setType(BloodType.A);
+//    profile.setAddress("221B baker street");
+//    profile.setPhone("+212-634411218");
+//    profileDao.save(profile);
+//    u.setProfile(profile);
+//    Region r = new Region();
+//    r.setName("Fes-Meknes");
+//    r.getUsers().add(u);
+//    Region rabat = new Region();
+//    rabat.setName("Rabat");
+//    rabat.getUsers().add(u);
+//    u.setRegion(r);
+//    Donation donation = new Donation(LocalDateTime.now().minusMonths(5));
+//    regionDao.save(r);
+//    donation.setRegion(r);
+//    donationDao.save(donation);
+//    u.getDonations().add(donation);
+//    userDao.save(u);
+//    logger.info("saving user " + u);
+//    fakeUsers.forEach(System.out::println);
+//    for (User user : fakeUsers) {
+//      r.getUsers().add(user);
+//      user.setRegion(r);
+//    }
+//    for (User user : fakeRabatUsers) {
+//      rabat.getUsers().add(user);
+//      user.setRegion(rabat);
+//    }
+//    regionDao.save(rabat);
+    createFakeUsers(faker);
+  }
+
+  private List<Region> createRegions() {
+    Set<Region> regions = Stream.of("Fes-Meknes", "Rabat").map(Region::new)
+        .collect(Collectors.toSet());
+    List<Region> ret  = new ArrayList<>();
+    for(Region region: regions) {
+      regionDao.save(region);
+      ret.add(region);
     }
-    regionDao.save(rabat);
+    logger.info("the regions " + ret);
+    return ret;
   }
 
   private List<User> createFakeUsers(Faker faker) {
@@ -107,6 +162,7 @@ public class DataBaseSeeder {
       cur.setEmail(faker.internet().emailAddress());
       cur.setCreatedAt(faker.date().past(90, TimeUnit.DAYS));
       cur.setPassword(faker.name().fullName());
+      cur.setRegion(getRandomRegion());
       Profile p = new Profile();
       p.setFirstName(faker.name().firstName());
       p.setLastName(faker.name().lastName());
@@ -121,13 +177,19 @@ public class DataBaseSeeder {
     return users;
   }
 
+  private Region getRandomRegion() {
+    List<Region> all = regionDao.findAll();
+    int i = rnd.nextInt(all.size());
+    return all.get(i);
+  }
+
   private BloodType randomBloodType() {
     BloodType[] r = new BloodType[4];
     r[0] = BloodType.A;
     r[1] = BloodType.B;
     r[2] = BloodType.B;
     r[3] = BloodType.O;
-    Random rnd = new Random();
     return r[rnd.nextInt(4)];
   }
+
 }

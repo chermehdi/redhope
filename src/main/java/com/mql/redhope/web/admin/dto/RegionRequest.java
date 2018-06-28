@@ -17,4 +17,11 @@ public class RegionRequest {
   public void setRegionName(String regionName) {
     this.regionName = regionName;
   }
+
+  @Override
+  public String toString() {
+    return "RegionRequest{" +
+        "regionName='" + regionName + '\'' +
+        '}';
+  }
 }

@@ -37,8 +37,8 @@ public class User implements Serializable {
 
   private Boolean isActive;
 
-  @ManyToMany(fetch = FetchType.EAGER)
-  private Set<Role> roles;
+  @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+  private Set<Role> roles = new HashSet<>();
 
   @OneToOne(cascade = CascadeType.ALL)
   private Profile profile;

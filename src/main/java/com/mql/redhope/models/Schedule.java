@@ -1,7 +1,8 @@
 package com.mql.redhope.models;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,14 +22,17 @@ public class Schedule {
   @OneToOne(fetch = FetchType.EAGER)
   private Region region;
 
-  private LocalDateTime time;
+  private LocalDate time;
 
   @OneToOne(fetch = FetchType.EAGER)
   private User user;
 
+  @Enumerated
+  private ScheduleStatus status = ScheduleStatus.PENDING;
+
   public Schedule() {}
 
-  public Schedule(Region region, LocalDateTime time, User user) {
+  public Schedule(Region region, LocalDate time, User user) {
     this.user = user;
     this.time = time;
     this.region = region;
@@ -50,11 +54,11 @@ public class Schedule {
     this.region = region;
   }
 
-  public LocalDateTime getTime() {
+  public LocalDate getTime() {
     return time;
   }
 
-  public void setTime(LocalDateTime time) {
+  public void setTime(LocalDate time) {
     this.time = time;
   }
 
@@ -64,5 +68,13 @@ public class Schedule {
 
   public void setUser(User user) {
     this.user = user;
+  }
+
+  public ScheduleStatus getStatus() {
+    return status;
+  }
+
+  public void setStatus(ScheduleStatus status) {
+    this.status = status;
   }
 }

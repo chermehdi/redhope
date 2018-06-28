@@ -48,7 +48,7 @@ public class RegionDaoImp implements RegionDao {
   @Override
   public void save(Region value) {
     try {
-      em.merge(value);
+      em.persist(value);
     } catch (Exception e) {
       log.error("could save region " + value);
     }

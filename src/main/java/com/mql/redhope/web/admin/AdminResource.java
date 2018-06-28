@@ -5,6 +5,7 @@ import com.mql.redhope.buisness.TokenIssuer;
 import com.mql.redhope.buisness.UserService;
 import com.mql.redhope.models.User;
 import com.mql.redhope.web.admin.dto.RegionRequest;
+import java.util.List;
 import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;
@@ -79,7 +80,8 @@ public class AdminResource {
   @Path("by-region")
   public Response getUsersByRegion(RegionRequest request) {
     logger.info(uriInfo.getPath() + " " + uriInfo.getBaseUri());
-    return Response.ok(adminService.getUsersMatchingRegion(request.getRegionName()))
-        .build();
+    List<User> usersMatchingRegion = adminService.getUsersMatchingRegion(request.getRegionName());
+    logger.info(request + " " + usersMatchingRegion);
+    return Response.ok(usersMatchingRegion).build();
   }
 }

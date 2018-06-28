@@ -9,4 +9,6 @@ import java.util.List;
 public interface ScheduleDao extends AbstractDao<Schedule> {
 
   List<Schedule> getUserSchedules(String email);
+
+  Schedule update(Schedule t);
 }

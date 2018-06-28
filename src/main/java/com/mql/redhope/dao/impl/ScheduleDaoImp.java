@@ -54,4 +54,14 @@ public class ScheduleDaoImp implements ScheduleDao {
     allSchedules.setParameter("email", email);
     return allSchedules.getResultList();
   }
+
+  @Override
+  public Schedule update(Schedule t) {
+    try {
+      em.merge(t);
+    }catch (Exception e) {
+      e.printStackTrace();
+    }
+    return t;
+  }
 }

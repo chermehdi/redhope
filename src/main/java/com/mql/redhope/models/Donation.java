@@ -54,4 +54,5 @@ public class Donation {
   public void setRegion(Region region) {
     this.region = region;
   }
+
 }

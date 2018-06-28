@@ -40,7 +40,8 @@
             </div>
           </div>
           <div slot="actions" class="__action">
-            <v-btn color="primary" @click="completeProfile"> {{ profileCompleted ? 'See Profile':
+            <v-btn :color="profileCompleted ? 'success': 'primary'" @click="completeProfile"> {{
+              profileCompleted ? 'See Profile':
               'Complete Profile'}}
             </v-btn>
           </div>
@@ -71,9 +72,9 @@
           class="elevation-1"
         >
           <template slot="items" slot-scope="props">
-            <td class="text-xs-right">{{ props.item.id }}</td>
-            <td class="text-xs-right">{{ props.item.date }}</td>
-            <td class="text-xs-right">{{ props.item.region }}</td>
+            <td class="text-xs-left">{{ props.item.id }}</td>
+            <td class="text-xs-left">{{ props.item.time }}</td>
+            <td class="text-xs-left">{{ props.item.region }}</td>
           </template>
         </v-data-table>
       </div>

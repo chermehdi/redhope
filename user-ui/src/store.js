@@ -89,12 +89,15 @@ export default new Vuex.Store({
           value: false,
           name: 'stuff',
           region: donation.regionName,
-          time: donation.createdAt,
+          time: new Date(donation.createdAt).toDateString(),
           id: pt
         })
         ++pt
       }
       return items
+    },
+    profile(state) {
+      return state.profile
     }
   },
   mutations: {

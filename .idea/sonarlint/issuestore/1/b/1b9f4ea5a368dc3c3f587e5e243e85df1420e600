@@ -1,6 +1,6 @@
 
-_squid:UselessImportCheck"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8¾ìšª,
-Zsquid:S2629)"7Use the built-in formatting to construct this argument.(¦„úŞüÿÿÿÿ8îó’ª,
+dsquid:S3457)"AFormat specifiers should be used instead of string concatenation.(¦„úŞüÿÿÿÿ8“„´äÁ,
 ¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ü›ºÆıÿÿÿÿ8îó’ª,
 Ÿsquid:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8îó’ª,
-dsquid:S3457)"AFormat specifiers should be used instead of string concatenation.(¦„úŞüÿÿÿÿ8“„´äÁ,
+Zsquid:S2629)"7Use the built-in formatting to construct this argument.(¦„úŞüÿÿÿÿ8îó’ª,
+_squid:UselessImportCheck"4Remove this unused import 'org.slf4j.LoggerFactory'.(–ÿÚŞ8¾ìšª,

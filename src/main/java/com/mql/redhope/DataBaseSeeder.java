@@ -6,13 +6,18 @@ import com.mql.redhope.dao.DonationDao;
 import com.mql.redhope.dao.ProfileDao;
 import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.RoleDao;
+import com.mql.redhope.dao.ScheduleDao;
 import com.mql.redhope.dao.UserDao;
+import com.mql.redhope.dto.ScheduleDto;
 import com.mql.redhope.models.BloodType;
 import com.mql.redhope.models.Donation;
 import com.mql.redhope.models.Profile;
 import com.mql.redhope.models.Region;
 import com.mql.redhope.models.Role;
+import com.mql.redhope.models.Schedule;
+import com.mql.redhope.models.ScheduleStatus;
 import com.mql.redhope.models.User;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,6 +54,9 @@ public class DataBaseSeeder {
   RegionDao regionDao;
 
   @Inject
+  ScheduleDao scheduleDao;
+
+  @Inject
   DonationDao donationDao;
 
   @Inject
@@ -62,8 +70,8 @@ public class DataBaseSeeder {
   public void init() {
     Set<Region> r = Stream.of("Fes-Meknes", "Rabat").map(Region::new)
         .collect(Collectors.toSet());
-    List<Region> regions  = new ArrayList<>();
-    for(Region region: r) {
+    List<Region> regions = new ArrayList<>();
+    for (Region region : r) {
       regionDao.save(region);
       regions.add(region);
     }
@@ -145,8 +153,8 @@ public class DataBaseSeeder {
   private List<Region> createRegions() {
     Set<Region> regions = Stream.of("Fes-Meknes", "Rabat").map(Region::new)
         .collect(Collectors.toSet());
-    List<Region> ret  = new ArrayList<>();
-    for(Region region: regions) {
+    List<Region> ret = new ArrayList<>();
+    for (Region region : regions) {
       regionDao.save(region);
       ret.add(region);
     }
@@ -156,7 +164,7 @@ public class DataBaseSeeder {
 
   private List<User> createFakeUsers(Faker faker) {
     List<User> users = new ArrayList<>();
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 10; i++) {
       User cur = new User();
       cur.setActive(true);
       cur.setEmail(faker.internet().emailAddress());
@@ -172,6 +180,8 @@ public class DataBaseSeeder {
       profileDao.save(p);
       cur.setProfile(p);
       userDao.save(cur);
+      generateScheduleForUser(cur);
+      generateDonationsForUser(cur);
       users.add(cur);
     }
     return users;
@@ -192,4 +202,35 @@ public class DataBaseSeeder {
     return r[rnd.nextInt(4)];
   }
 
+  private void generateScheduleForUser(User user) {
+    for (int i = 0; i < rnd.nextInt(10); i++) {
+      Schedule schedule = new Schedule();
+      schedule.setStatus(getRandomStatus());
+      schedule.setRegion(user.getRegion());
+      schedule.setTime(LocalDate.now().plusDays(rnd.nextInt(10)));
+      schedule.setUser(user);
+      scheduleDao.save(schedule);
+    }
+  }
+
+  private void generateDonationsForUser(User user) {
+    List<Schedule> schedules = scheduleDao.findAll();
+    for (Schedule schedule : schedules) {
+      if (schedule.getStatus() == ScheduleStatus.DONE) {
+        Donation donation = new Donation();
+        donation.setCreatedAt(schedule.getTime().atStartOfDay());
+        donation.setRegion(schedule.getRegion());
+        donationDao.save(donation);
+        user.getDonations().add(donation);
+      }
+    }
+    userDao.update(user);
+  }
+
+  private ScheduleStatus getRandomStatus() {
+    if (rnd.nextBoolean()) {
+      return ScheduleStatus.PENDING;
+    }
+    return ScheduleStatus.DONE;
+  }
 }

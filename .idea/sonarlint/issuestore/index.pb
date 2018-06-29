@@ -172,3 +172,23 @@ b
 2src/main/java/com/mql/redhope/models/Donation.java,4/4/44b2d4f43df643399915b4029e80f623c3263ab5
 l
 <src/main/java/com/mql/redhope/web/user/DonationResource.java,2/5/25666a020ef817d17e5cbcdc1faa7fab896e9b03
+P
+ user-ui/src/pages/Scheduling.vue,d/a/da795b9d5af8b3e1e5d4572178204c26b8b6405b
+V
+&user-ui/src/assets/css/vuetify.min.css,9/7/9729b6a8023c3f548a0eb4e588bd7af4fbddf1e4
+h
+8src/main/java/com/mql/redhope/models/ScheduleStatus.java,b/3/b3070057b9fbeaec6449324974d9656837014dae
+b
+2src/main/java/com/mql/redhope/models/Schedule.java,9/4/94f17fc4cae01c53b403fad74c9aff2cc701b29f
+j
+:src/main/java/com/mql/redhope/dao/impl/ScheduleDaoImp.java,b/3/b34272452d5da0701864fa158f6829d1857f1733
+b
+2src/main/java/com/mql/redhope/dao/ScheduleDao.java,6/0/605b50b4ced0c79c2b1511f534ce9d05b6ffd4c6
+l
+<src/main/java/com/mql/redhope/buisness/DonationListener.java,0/c/0ca9465f12a5502d3647448feae603be69361e95
+k
+;src/main/java/com/mql/redhope/buisness/ScheduleService.java,a/d/ad88ad9a8a3d8b406a611213a35a25cb2496bc53
+s
+Csrc/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java,e/9/e953472eb3b124b2ae1d37a1d2f8ccbfd8337892
+l
+<src/main/java/com/mql/redhope/web/user/ScheduleResource.java,b/7/b7a10dc46a7ce487e324caaecfbf57ac36d0aad6

@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  * @author mehdithe
@@ -22,6 +23,7 @@ public class Region {
 
   private String name;
 
+  @XmlTransient
   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "region")
   List<User> users;
 

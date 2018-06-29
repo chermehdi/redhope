@@ -37,6 +37,7 @@ public class User implements Serializable {
 
   private Boolean isActive;
 
+  @XmlTransient
   @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private Set<Role> roles = new HashSet<>();
 
@@ -51,6 +52,7 @@ public class User implements Serializable {
   @XmlTransient
   private Region region;
 
+  @XmlTransient
   @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private Set<Donation> donations = new HashSet<>();
 

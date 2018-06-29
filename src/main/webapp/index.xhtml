@@ -1,155 +1,162 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html">
 
-	<ui:composition template="templates/nav-layout.xhtml">
-<ui:define name="content">
-<div class="container" style="margin-top: 100px">
-  <div class="wrappper">
-    <div class="row">
-      <div class="col-sm-12 col-md-6">
-          <h1 class="primaryText">Save A life, Be a Hero !</h1>
-          <p class="secondaryText subHeader animated slideInLeft">
-              Subscribe and give life to people , the blood you give is a lifeline in an emergency and for
-              people who need long-term treatments .
-          </p>
-      </div>
-      <div class="col-sm-12 col-md-6">
-        <div class="blood-drop">
-        <ui:include src="resources/img/blood-drop.svg" />
-        </div>
-      </div>
-    </div>
-  </div>
+<ui:composition template="templates/nav-layout.xhtml">
+    <ui:define name="content">
+        <div class="container" style="margin-top: 100px">
+            <div class="wrappper">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h1 class="primaryText">Save A life, Be a Hero !</h1>
+                        <p class="secondaryText subHeader animated slideInLeft">
+                            Subscribe and give life to people , the blood you give is a lifeline in an emergency and for
+                            people who need long-term treatments .
+                        </p>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="blood-drop">
+                            <ui:include src="resources/img/blood-drop.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-</div>
-<section class="services accent-background" id="our-services">
-  <div class="container">
-    <div class="row"> 
-      <div class="col-md-12">
-        <h1 class="primaryText text-center">Our Services</h1>
-      </div>
-    </div>
-    <div class="row space-top">
-      <div class="col-md-4 col-sm-12">
-        <div class="service-container card">
-          <div class="service-header">
-              <h3 class="text-center accent">Donor Service</h3>
-          </div>
-          <div class="service-content">
-              <p class="accent text-center">
-                  Redhope gives you a change to subscribe and be ready to save lives.
-                  One donation can potentially help more than one patient.
-              </p>
-          </div>
         </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="service-container card">
-          <div class="service-header">
-              <h3 class="text-center accent">Hospital Service</h3>
-          </div>
-          <div class="service-content">
-              <p class="accent text-center">
-                  Redhope gives you a portal, to keep track of wanting donors and potential blood
-                  supply levels, also it helps you manage events.
-              </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="service-container card">
-          <div class="service-header">
-              <h3 class="text-center accent">Not yet decided</h3>
-          </div>
-          <div class="service-content">
-            <p class="accent text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam
-              cupiditate dolores id ipsa itaque numquam obcaecati quam quas quia quidem quisquam quos, recusandae
-              repudiandae rerum, sit suscipit veniam voluptate?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="aboutUs" class="about whiteBackground">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1">  </div>
-      <div class="col-sm-10">
-        <h1 class="accent text-center">About Us</h1>
-        <p class="space-top text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem consectetur doloremque eaque eum
-          exercitationem, facilis fugit harum in maxime nemo nobis porro quasi quidem, ullam? Debitis iure
-          necessitatibus voluptates.</p>
-      </div>
-      <div class="col-sm-12" id="carousel">
-        <div style="top: 1%; left: 1%; transform: scale(1.2)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/me.jpg" class="avatar" />
-        </div>
-        <div style="top: 30%; left: 40%;transform: scale(.6)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Ahmed.jpg" class="avatar" />
-        </div>
-        <div style="top: 50%; left: 50%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Hamza.jpg" class="avatar" />
-        </div>
-        <div style="top: 60%; left: 10%; transform: scale(.7)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Ghita.jpg" class="avatar" />
-        </div>
-        <div style="top: 20%; left: 24%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Hicham.jpg" class="avatar" />
-        </div>
-        <div style="top: 10%; left: 70%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/HichamHaydar.jpg" class="avatar" />
-        </div>
-        <div style="top: 30%; left: 80%;transform: scale(1.1)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Houda.jpg" class="avatar" />
-        </div>
-        <div style="top: 10%; left: 50%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Mouna.jpg" class="avatar" />
-        </div>
-        <div style="top: 40%; left: 90%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Saad.jpg" class="avatar" />
-        </div>
-        <div style="top: 5%; left: 90%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Titi_Salma.jpg" class="avatar" />
-        </div>
-        <div style="top: 20%; left: 10%" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Zack.jpg" class="avatar" />
-        </div>
-        <div style="top: 55%; left: 70%; transform: scale(.9)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/chaimae.jpg" class="avatar" />
-        </div>
-        <!-- -->
-        <div style="top: 55%; left: 16%; transform: scale(.5)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Abdelali.jpg" class="avatar" />
-        </div>
-        <div style="top: 55%; left: 25%; transform: scale(.9)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Anouar.jpg" class="avatar" />
-        </div>
-        <div style="top: 55%; left: 1%; transform: scale(.8)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/HamzaBerrada.jpg" class="avatar" />
-        </div>
-        <div style="top: 1%; left: 30%; transform: scale(.8)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Hassan.jpg" class="avatar" />
-        </div>
-        <div style="top: 0%; left: 60%; transform: scale(.6)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Houleye.jpg" class="avatar" />
-        </div>
-        <div style="top: 35%; left: 60%; transform: scale(.9)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Oualid.jpg" class="avatar" />
-        </div>
-        <div style="top: 55%; left: 35%; transform: scale(.9)" class="image-container rounded-circle">
-          <h:graphicImage value="resources/img/team/Yassir.jpg" class="avatar" />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-		
-	</ui:define>
-	<ui:define name="scripts">
-		<h:outputScript library="js" name="app.js"></h:outputScript>
-	</ui:define>
-	</ui:composition>
+        <section class="services accent-background" id="our-services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="primaryText text-center">Our Services</h1>
+                    </div>
+                </div>
+                <div class="row space-top">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="service-container card">
+                            <div class="service-header">
+                                <h3 class="text-center accent">Donor Service</h3>
+                            </div>
+                            <div class="service-content">
+                                <p class="accent text-center">
+                                    Redhope gives you a change to subscribe and be ready to save lives.
+                                    One donation can potentially help more than one patient.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="service-container card">
+                            <div class="service-header">
+                                <h3 class="text-center accent">Blood Bank Service</h3>
+                            </div>
+                            <div class="service-content">
+                                <p class="accent text-center">
+                                    Redhope gives you a portal, to keep track of wanting donors and potential blood
+                                    supply levels, also it helps you manage events.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="aboutUs" class="about whiteBackground">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <h1 class="accent text-center">About Us</h1>
+                        <p class="space-top text-center">
+                            introducting to you of group of motiviated students wanting to make a change in the world.
+                            this platform is the begining of a big dream in which you we have worked so hard to make the process
+                            of donating blood as easy as possible .
+                        </p>
+                    </div>
+                    <div class="col-sm-12" id="carousel">
+                        <div style="top: 1%; left: 1%; transform: scale(1.2)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/me.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 30%; left: 40%;transform: scale(.6)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Ahmed.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 50%; left: 50%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Hamza.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 60%; left: 10%; transform: scale(.7)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Ghita.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 20%; left: 24%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Hicham.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 10%; left: 70%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/HichamHaydar.jpg"
+                                            class="avatar"/>
+                        </div>
+                        <div style="top: 30%; left: 80%;transform: scale(1.1)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Houda.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 10%; left: 50%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Mouna.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 40%; left: 90%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Saad.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 5%; left: 90%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Titi_Salma.jpg"
+                                            class="avatar"/>
+                        </div>
+                        <div style="top: 20%; left: 10%" class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Zack.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 55%; left: 70%; transform: scale(.9)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/chaimae.jpg" class="avatar"/>
+                        </div>
+                        <!-- -->
+                        <div style="top: 55%; left: 16%; transform: scale(.5)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Abdelali.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 55%; left: 25%; transform: scale(.9)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Anouar.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 55%; left: 1%; transform: scale(.8)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/HamzaBerrada.jpg"
+                                            class="avatar"/>
+                        </div>
+                        <div style="top: 1%; left: 30%; transform: scale(.8)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Hassan.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 0%; left: 60%; transform: scale(.6)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Houleye.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 35%; left: 60%; transform: scale(.9)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Oualid.jpg" class="avatar"/>
+                        </div>
+                        <div style="top: 55%; left: 35%; transform: scale(.9)"
+                             class="image-container rounded-circle">
+                            <h:graphicImage value="resources/img/team/Yassir.jpg" class="avatar"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </ui:define>
+    <ui:define name="scripts">
+        <h:outputScript library="js" name="app.js"></h:outputScript>
+    </ui:define>
+</ui:composition>
 </html>

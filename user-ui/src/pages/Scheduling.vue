@@ -81,11 +81,15 @@
 
   .flex {
     display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
-
   .wrapper {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 80vw 1fr;
+  }
+  .card {
+    padding: .5rem;
   }
 </style>

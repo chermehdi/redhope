@@ -22,6 +22,7 @@
           <li class="nav-item"><a href="#" target="_blank"
                                   class="nav-link">About</a></li>
           <li class="nav-item"><a href="#" id="services" class="nav-link">Services</a>
+          <li class="nav-item"><router-link to="/dashboard/events" class="nav-link">Events</router-link>
           </li>
           <li v-if="!isConnected" class="nav-item"><a href="signup-general.xhtml"
                                                       class="btn btn-round accent-background"

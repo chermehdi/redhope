@@ -38,8 +38,9 @@ public class User implements Serializable {
   private Boolean isActive;
 
   @XmlTransient
-  @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+  @ManyToMany(fetch = FetchType.EAGER)
   private Set<Role> roles = new HashSet<>();
+
 
   @OneToOne(cascade = CascadeType.ALL)
   private Profile profile;

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import router from './router'
+import router from '../router/index'
+import {formatDate} from './utils'
 
 Vue.use(Vuex)
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
     overviewLoading: false,
     token: localStorage.getItem('_token'),
     user: {},
+    events: [],
     regions: [],
     profile: {
       completed: false,
@@ -29,6 +31,22 @@ export default new Vuex.Store({
     donations: []
   },
   getters: {
+    events(state) {
+      return state.events.map(event => {
+      let  { createdAt } = event
+        return {
+          "id": event.id,
+          "content": event.content,
+          date: formatDate(
+            createdAt.year,
+            createdAt.monthValue,
+            createdAt.dayOfMonth,
+            createdAt.hour,
+            createdAt.minute
+          )
+        }
+      })
+    },
     regions(state) {
       let values = []
       for (let region of state.regions) {
@@ -98,7 +116,7 @@ export default new Vuex.Store({
     },
     profile(state) {
       return state.profile
-    }
+    },
   },
   mutations: {
     DISPLAY_LOADER(state) {
@@ -143,6 +161,9 @@ export default new Vuex.Store({
     },
     UPDATE_REGIONS(state, regions) {
       state.regions = regions
+    },
+    SET_EVENTS(state, events) {
+      state.events = events
     }
   },
   actions: {
@@ -237,7 +258,18 @@ export default new Vuex.Store({
       .catch(err => {
         console.log('an error occured ', err)
       })
-
+    },
+    fetchEvents({commit, state}, page) {
+      commit('DISPLAY_LOADER')
+      this._vm.$http.get(`/api/events/page/${page}`, {
+        headers: {
+          'Authorization': state.token
+        }
+      }).then(res => res.json())
+      .then(events => {
+        commit('SET_EVENTS', events)
+        commit('HIDE_LOADER')
+      })
     }
   }
 })

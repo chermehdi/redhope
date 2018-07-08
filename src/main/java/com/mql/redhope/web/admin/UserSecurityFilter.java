@@ -1,6 +1,10 @@
 package com.mql.redhope.web.admin;
 
+import com.mql.redhope.dao.UserDao;
+import com.mql.redhope.models.User;
 import com.mql.redhope.web.admin.jwt.KeyGenerator;
+import com.mql.redhope.web.security.UserSecurityContext;
+import com.mql.redhope.web.user.UserResource;
 import io.jsonwebtoken.Jwts;
 import java.io.IOException;
 import java.security.Key;
@@ -21,16 +25,19 @@ import org.slf4j.Logger;
 /**
  * @author mehdithe
  */
-@Secured
+@UserSecured
 @Provider
 @Priority(Priorities.AUTHENTICATION)
-public class SecurityFilter implements ContainerRequestFilter {
+public class UserSecurityFilter implements ContainerRequestFilter {
 
   @Inject
   Logger logger;
 
   @Inject
   KeyGenerator keyGenerator;
+
+  @Inject
+  UserDao userDao;
 
   @Override
   public void filter(ContainerRequestContext requestContext) throws IOException {
@@ -51,28 +58,13 @@ public class SecurityFilter implements ContainerRequestFilter {
           .getBody()
           .getSubject();
 
+      User user = userDao.findByEmail(email);
+      // any regular user is allowed to view the resource
+      if(user == null) {
+        throw new RuntimeException();
+      }
       // create the request context object
-      requestContext.setSecurityContext(new SecurityContext() {
-        @Override
-        public Principal getUserPrincipal() {
-          return () -> email;
-        }
-
-        @Override
-        public boolean isUserInRole(String role) {
-          return false;
-        }
-
-        @Override
-        public boolean isSecure() {
-          return true;
-        }
-
-        @Override
-        public String getAuthenticationScheme() {
-          return "JWT";
-        }
-      });
+      requestContext.setSecurityContext(new UserSecurityContext(user));
       logger.info("#### valid token : " + authorizationHeader);
 
     } catch (Exception e) {

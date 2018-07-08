@@ -6,7 +6,8 @@ import Dashboard from '@/pages/Dashboard'
 import Overview from '@/pages/Overview'
 import Profile from '@/pages/Profile'
 import Scheduling from '@/pages/Scheduling'
-import store from '../store'
+import Events from '@/pages/Events'
+import store from '../store/index'
 
 Vue.use(Router)
 
@@ -63,6 +64,11 @@ export default new Router({
           path: 'scheduling',
           name: 'scheduling',
           component: Scheduling
+        },
+        {
+          path: 'events',
+          name: 'events',
+          component: Events
         }
       ]
     }

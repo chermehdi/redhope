@@ -7,7 +7,7 @@ import VueResource from 'vue-resource'
 
 import moment from 'moment'
 
-import store from './store'
+import store from './store/index'
 import App from './App'
 import router from './router'
 import 'vuetify/dist/vuetify.min.css'

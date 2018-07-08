@@ -2,11 +2,10 @@ package com.mql.redhope.web.user;
 
 import com.mql.redhope.buisness.ScheduleService;
 import com.mql.redhope.dto.ScheduleDto;
-import com.mql.redhope.models.Donation;
 import com.mql.redhope.models.Schedule;
 import com.mql.redhope.models.ScheduleStatus;
 import com.mql.redhope.models.User;
-import com.mql.redhope.web.admin.Secured;
+import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -53,7 +52,7 @@ public class ScheduleResource {
   Event<Schedule> donationEvent;
 
   @GET
-  @Secured
+  @UserSecured
   public Response getAllSchedulesForUser(@Context SecurityContext context) {
     Principal principal = context.getUserPrincipal();
     String email = principal.getName();
@@ -65,7 +64,7 @@ public class ScheduleResource {
   }
 
   @POST
-  @Secured
+  @UserSecured
   public Response createSchedule(@Valid ScheduleDto body) {
     Schedule schedule = scheduleService.createSchedule(body);
     if (schedule == null) {
@@ -77,7 +76,7 @@ public class ScheduleResource {
 
   @GET
   @Path("all")
-  @Secured
+  @UserSecured
   public Response getAllSchedules(@Context SecurityContext context) {
     Principal principal = context.getUserPrincipal();
     Optional<List<Schedule>> schedules = scheduleService.getAllSchedules(principal.getName());
@@ -91,7 +90,7 @@ public class ScheduleResource {
     return Response.status(Status.UNAUTHORIZED).build();
   }
 
-  @Secured
+  @UserSecured
   @GET
   @Path("{date}")
   public Response getSchedulesForDay(@PathParam("date") String date,
@@ -119,7 +118,7 @@ public class ScheduleResource {
 
   @Path("mark/{id}")
   @GET
-  @Secured
+  @UserSecured
   public Response markScheduleAsDone(@PathParam("id") Long id, @Context SecurityContext context) {
     logger.info("trying to mark schedule with id " + id);
     Principal principal = context.getUserPrincipal();

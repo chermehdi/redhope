@@ -20,7 +20,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author mehdithe
  */
-@WebFilter(filterName = "SecurityFilter", urlPatterns = {"/*"})
+@WebFilter(filterName = "UserSecurityFilter", urlPatterns = {"/*"})
 public class SecurityFilter implements Filter {
 
   @Inject

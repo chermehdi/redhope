@@ -1,6 +1,6 @@
 <template>
   <v-layout wrap style="height: 100vh">
-    <div id="app">
+    <div class="full-width">
       <v-container>
         <navigation v-on:sidebarshow="showSidebar"></navigation>
         <transition name="fade" :key="router.path">

@@ -2,7 +2,6 @@ package com.mql.redhope.web.admin;
 
 import com.mql.redhope.buisness.AdminService;
 import com.mql.redhope.buisness.TokenIssuer;
-import com.mql.redhope.buisness.UserService;
 import com.mql.redhope.models.User;
 import com.mql.redhope.web.admin.dto.RegionRequest;
 import java.util.List;
@@ -60,7 +59,7 @@ public class AdminResource {
   }
 
   @GET
-  @Secured
+  @UserSecured
   @Path("info")
   public Response adminInfo(@Context SecurityContext context) {
     if (context == null || context.getUserPrincipal() == null) {
@@ -76,7 +75,7 @@ public class AdminResource {
   }
 
   @POST
-  @Secured
+  @UserSecured
   @Path("by-region")
   public Response getUsersByRegion(RegionRequest request) {
     logger.info(uriInfo.getPath() + " " + uriInfo.getBaseUri());

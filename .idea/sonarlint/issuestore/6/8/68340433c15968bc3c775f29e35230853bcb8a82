@@ -1,11 +1,11 @@
 
-dsquid:S1192U"FDefine a constant instead of duplicating this literal "mehdi" 4 times.(”Øî†8ÂšÖšÄ,
-hsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(Ù’ó8›©…Ä,
-_squid:S3457N"AFormat specifiers should be used instead of string concatenation.(ªëò8š±¯œÄ,
 `squid:S3457¡"AFormat specifiers should be used instead of string concatenation.(à·Ş£8İŸ¬œÄ,
-Usquid:S2629N"7Use the built-in formatting to construct this argument.(ªëò8š±¯œÄ,
 lsquid:UselessImportCheck"<Remove this unused import 'com.mql.redhope.dto.ScheduleDto'.(¶æšŒÿÿÿÿÿ8Ü¤ç³Ä,
+Usquid:S2629N"7Use the built-in formatting to construct this argument.(ªëò8š±¯œÄ,
+_squid:S3457N"AFormat specifiers should be used instead of string concatenation.(ªëò8š±¯œÄ,
+dsquid:S1192U"FDefine a constant instead of duplicating this literal "mehdi" 4 times.(”Øî†8ÂšÖšÄ,
 Vsquid:S2629¡"7Use the built-in formatting to construct this argument.(à·Ş£8İŸ¬œÄ,
+dsquid:UnusedPrivateMethod™"2Remove this unused private "createRegions" method.(É×±œÿÿÿÿÿ8š±¯œÄ,
+hsquid:CommentedOutCodeLinej"<This block of commented-out lines of code should be removed.(Ù’ó8›©…Ä,
 V
 squid:S106e"9Replace this use of System.out or System.err by a logger.(İæ´8ë« œÄ,
-dsquid:UnusedPrivateMethod™"2Remove this unused private "createRegions" method.(É×±œÿÿÿÿÿ8š±¯œÄ,

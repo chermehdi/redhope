@@ -3,6 +3,7 @@ package com.mql.redhope;
 import com.github.javafaker.Faker;
 import com.mql.redhope.buisness.PasswordEncoder;
 import com.mql.redhope.dao.DonationDao;
+import com.mql.redhope.dao.EventPostDao;
 import com.mql.redhope.dao.ProfileDao;
 import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.RoleDao;
@@ -11,6 +12,7 @@ import com.mql.redhope.dao.UserDao;
 import com.mql.redhope.dto.ScheduleDto;
 import com.mql.redhope.models.BloodType;
 import com.mql.redhope.models.Donation;
+import com.mql.redhope.models.EventPost;
 import com.mql.redhope.models.Profile;
 import com.mql.redhope.models.Region;
 import com.mql.redhope.models.Role;
@@ -60,6 +62,9 @@ public class DataBaseSeeder {
   DonationDao donationDao;
 
   @Inject
+  EventPostDao eventPostDao;
+
+  @Inject
   Logger logger;
 
   Faker faker = new Faker();
@@ -68,6 +73,11 @@ public class DataBaseSeeder {
 
   @PostConstruct
   public void init() {
+    Role userRole = new Role("USER");
+    Role adminRole = new Role("ADMIN");
+    roleDao.save(userRole);
+    roleDao.save(adminRole);
+
     Set<Region> r = Stream.of("Fes-Meknes", "Rabat").map(Region::new)
         .collect(Collectors.toSet());
     List<Region> regions = new ArrayList<>();
@@ -96,8 +106,8 @@ public class DataBaseSeeder {
     adminProfile.setPhone("0634411218");
     admin.setProfile(adminProfile);
     donor.setProfile(donorProfile);
-    admin.setRoles(Stream.of("ADMIN", "USER").map(Role::new).collect(Collectors.toSet()));
-    donor.setRoles(Stream.of("USER").map(Role::new).collect(Collectors.toSet()));
+    admin.setRoles(Stream.of(adminRole, userRole).collect(Collectors.toSet()));
+    donor.setRoles(Stream.of(userRole).collect(Collectors.toSet()));
     System.out.println(regions);
     admin.setRegion(regions.get(0));
     donor.setRegion(regions.get(1));
@@ -148,6 +158,10 @@ public class DataBaseSeeder {
 //    }
 //    regionDao.save(rabat);
     createFakeUsers(faker);
+    for(int i = 0; i < 20; i++) {
+      EventPost newPost = EventPost.of(faker.lorem().characters(20));
+      eventPostDao.save(newPost);
+    }
   }
 
   private List<Region> createRegions() {

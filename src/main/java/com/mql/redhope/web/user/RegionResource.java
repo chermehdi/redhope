@@ -1,7 +1,7 @@
 package com.mql.redhope.web.user;
 
 import com.mql.redhope.dao.RegionDao;
-import com.mql.redhope.web.admin.Secured;
+import com.mql.redhope.web.admin.UserSecured;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.ejb.Stateless;
@@ -20,7 +20,7 @@ public class RegionResource {
   @Inject
   RegionDao regionDao;
 
-  @Secured
+  @UserSecured
   @GET
   public Response getAllRegions() {
     List<String> regions = regionDao.findAll().stream()

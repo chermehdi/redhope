@@ -6,8 +6,6 @@ import com.mql.redhope.dao.TokenDao;
 import com.mql.redhope.dao.UserDao;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.enterprise.concurrent.ManagedExecutorService;

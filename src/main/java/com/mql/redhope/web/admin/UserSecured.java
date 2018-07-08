@@ -12,6 +12,6 @@ import javax.ws.rs.NameBinding;
 @NameBinding
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.TYPE})
-public @interface Secured {
+public @interface UserSecured {
 
 }

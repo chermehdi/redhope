@@ -1,12 +1,9 @@
 package com.mql.redhope.web.user;
 
 import com.mql.redhope.buisness.UserService;
-import com.mql.redhope.dao.DonationDao;
 import com.mql.redhope.models.Donation;
-import com.mql.redhope.models.Region;
-import com.mql.redhope.web.admin.Secured;
+import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import javax.inject.Inject;
@@ -38,7 +35,7 @@ public class DonationResource {
   UriInfo uriInfo;
 
   @GET
-  @Secured
+  @UserSecured
   public List<DonationDto> allDonations(@Context SecurityContext context) {
 
     List<DonationDto> donations = userService
@@ -78,7 +75,7 @@ public class DonationResource {
 
   @POST
   @Path("create")
-  @Secured
+  @UserSecured
   public Response createDonation(@Context SecurityContext context) {
     Principal principal = context.getUserPrincipal();
     Donation donation = new Donation();

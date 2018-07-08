@@ -3,8 +3,7 @@ package com.mql.redhope.web.user;
 import com.mql.redhope.buisness.UserService;
 import com.mql.redhope.models.BloodType;
 import com.mql.redhope.models.Profile;
-import com.mql.redhope.models.User;
-import com.mql.redhope.web.admin.Secured;
+import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
 import javax.inject.Inject;
 import javax.json.Json;
@@ -25,7 +24,7 @@ public class UserResource {
   @Inject
   UserService userService;
 
-  @Secured
+  @UserSecured
   @GET
   @Path("/me")
   public Response getUserInfo(@Context SecurityContext context) {
@@ -37,7 +36,7 @@ public class UserResource {
 
   @POST
   @Path("/update")
-  @Secured
+  @UserSecured
   public Response updateProfile(@Context SecurityContext context, JsonObject body) {
     Principal principal = context.getUserPrincipal();
     Profile profile = userService.updateProfile(principal.getName(), body);

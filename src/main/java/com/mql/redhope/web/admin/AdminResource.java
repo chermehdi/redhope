@@ -2,7 +2,7 @@ package com.mql.redhope.web.admin;
 
 import com.mql.redhope.buisness.AdminService;
 import com.mql.redhope.buisness.TokenIssuer;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.User;
 import com.mql.redhope.web.admin.dto.RegionRequest;
 import java.util.List;
 import javax.inject.Inject;

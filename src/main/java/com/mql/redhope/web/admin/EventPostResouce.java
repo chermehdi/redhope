@@ -1,8 +1,7 @@
 package com.mql.redhope.web.admin;
 
 import com.mql.redhope.buisness.EventPostService;
-import com.mql.redhope.models.EventPost;
-import com.mql.redhope.web.security.UserSecurityContext;
+import com.mql.redhope.domain.models.EventPost;
 import java.util.List;
 import javax.inject.Inject;
 import javax.json.JsonObject;

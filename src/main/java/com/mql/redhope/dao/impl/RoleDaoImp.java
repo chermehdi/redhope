@@ -1,7 +1,7 @@
 package com.mql.redhope.dao.impl;
 
 import com.mql.redhope.dao.RoleDao;
-import com.mql.redhope.models.Role;
+import com.mql.redhope.domain.models.Role;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

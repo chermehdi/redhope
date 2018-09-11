@@ -1,6 +1,6 @@
 package com.mql.redhope.web.security;
 
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.User;
 import java.security.Principal;
 import javax.ws.rs.core.SecurityContext;
 

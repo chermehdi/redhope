@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.util.List;
 import java.util.Vector;
@@ -22,6 +22,7 @@ public class Region {
   private Long id;
 
   private String name;
+
 
   @XmlTransient
   @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "region")

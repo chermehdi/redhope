@@ -1,6 +1,6 @@
 package com.mql.redhope.buisness;
 
-import com.mql.redhope.models.EventPost;
+import com.mql.redhope.domain.models.EventPost;
 import java.util.List;
 import javax.json.JsonObject;
 

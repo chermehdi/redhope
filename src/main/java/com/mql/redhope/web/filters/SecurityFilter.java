@@ -1,6 +1,6 @@
 package com.mql.redhope.web.filters;
 
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.User;
 import java.io.IOException;
 import javax.inject.Inject;
 import javax.servlet.Filter;
@@ -13,7 +13,6 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Security filter to test the security level of the current user

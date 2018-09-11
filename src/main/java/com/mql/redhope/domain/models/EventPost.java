@@ -1,7 +1,6 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.time.LocalDateTime;
-import javax.json.JsonObject;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

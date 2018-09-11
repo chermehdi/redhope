@@ -9,15 +9,15 @@ import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.RoleDao;
 import com.mql.redhope.dao.ScheduleDao;
 import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.models.BloodType;
-import com.mql.redhope.models.Donation;
-import com.mql.redhope.models.EventPost;
-import com.mql.redhope.models.Profile;
-import com.mql.redhope.models.Region;
-import com.mql.redhope.models.Role;
-import com.mql.redhope.models.Schedule;
-import com.mql.redhope.models.ScheduleStatus;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.BloodType;
+import com.mql.redhope.domain.models.Donation;
+import com.mql.redhope.domain.models.EventPost;
+import com.mql.redhope.domain.models.Profile;
+import com.mql.redhope.domain.models.Region;
+import com.mql.redhope.domain.models.Role;
+import com.mql.redhope.domain.models.Schedule;
+import com.mql.redhope.domain.models.ScheduleStatus;
+import com.mql.redhope.domain.models.User;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +66,8 @@ public class DataBaseSeeder {
   Faker faker = new Faker();
 
   Random rnd = new Random();
+
+  static int counter = 1;
 
   @PostConstruct
   public void init() {
@@ -184,6 +186,7 @@ public class DataBaseSeeder {
     for (Schedule schedule : schedules) {
       if (schedule.getStatus() == ScheduleStatus.DONE) {
         Donation donation = new Donation();
+        donation.setDonationId("abcde" + counter++);
         donation.setCreatedAt(schedule.getTime().atStartOfDay());
         donation.setRegion(schedule.getRegion());
         donationDao.save(donation);

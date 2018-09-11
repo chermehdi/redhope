@@ -1,7 +1,7 @@
 package com.mql.redhope.web.user;
 
 import com.mql.redhope.buisness.UserService;
-import com.mql.redhope.models.Donation;
+import com.mql.redhope.domain.models.Donation;
 import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
 import java.util.List;

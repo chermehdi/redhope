@@ -1,6 +1,6 @@
 package com.mql.redhope.dao;
 
-import com.mql.redhope.models.Region;
+import com.mql.redhope.domain.models.Region;
 
 /**
  * @author mehdithe

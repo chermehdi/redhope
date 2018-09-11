@@ -2,8 +2,7 @@ package com.mql.redhope.buisness.impl;
 
 import com.mql.redhope.buisness.EventPostService;
 import com.mql.redhope.dao.EventPostDao;
-import com.mql.redhope.models.EventPost;
-import com.mql.redhope.web.admin.EventPostResouce;
+import com.mql.redhope.domain.models.EventPost;
 import java.util.Collections;
 import java.util.List;
 import javax.ejb.Stateless;

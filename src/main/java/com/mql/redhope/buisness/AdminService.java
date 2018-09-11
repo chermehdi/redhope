@@ -1,6 +1,6 @@
 package com.mql.redhope.buisness;
 
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.User;
 import java.util.List;
 
 /**

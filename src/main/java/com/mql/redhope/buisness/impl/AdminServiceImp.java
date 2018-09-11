@@ -5,15 +5,12 @@ import com.mql.redhope.buisness.PasswordEncoder;
 import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.RoleDao;
 import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.models.Region;
-import com.mql.redhope.models.Role;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.Region;
+import com.mql.redhope.domain.models.Role;
+import com.mql.redhope.domain.models.User;
 import java.util.Collections;
 import java.util.List;
 import javax.inject.Inject;
-import javax.json.Json;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObjectBuilder;
 import org.slf4j.Logger;
 
 /**

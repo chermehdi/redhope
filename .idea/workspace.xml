@@ -7,31 +7,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aeda4e0-a2a3-4de2-930b-6e85db414a42" name="Default" comment="setup the user dashboard to work properly with vuetify">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Plasma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Platelet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/RedCell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/security/Subscribable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/605e268fe13f1155f35672a291e0b1657ca1e606" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/605e268fe13f1155f35672a291e0b1657ca1e606" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68340433c15968bc3c775f29e35230853bcb8a82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68340433c15968bc3c775f29e35230853bcb8a82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86b60933d911ae515ec4d9ec8a3e9510ac761d1e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/86b60933d911ae515ec4d9ec8a3e9510ac761d1e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90563ae11b871fcd91ac71763eaecdc07a10c2e2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9248e5ee7f8cd9f219603f6d34f34e13e7f00c70" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9248e5ee7f8cd9f219603f6d34f34e13e7f00c70" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c890520fabde475b9a48241ec377e416ce32d597" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb7f0716a469d40352ecfde63040def3d100bd88" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb7f0716a469d40352ecfde63040def3d100bd88" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9c072ade1555791e476cffc5e578eb00ea535bf" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9c072ade1555791e476cffc5e578eb00ea535bf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/exceptions/StockException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/EntityNotFoundExceptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/StockExceptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/stock-config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/DonationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/DonationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/EventPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/EventPostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/ScheduleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/StockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/StockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/AdminServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/AdminServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/EventPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/EventPostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/StockServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/StockServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/UserServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/BloodType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/BloodType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Donation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/EventPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/EventPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/DonationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/DonationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/EventPostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/EventPostDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ProfileDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ProfileDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/RegionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/RegionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/RoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ScheduleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ScheduleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/TokenDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/TokenDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/DonationDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/DonationDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/EventPostDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/EventPostDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/ProfileDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/ProfileDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/RegionDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/RegionDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/RoleDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/RoleDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/ScheduleDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/ScheduleDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/TokenDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/TokenDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/UserDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dto/ScheduleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/dto/ScheduleDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/BloodType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/BloodType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Donation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Donation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/EventPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/EventPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Plasma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Plasma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Platelet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Platelet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/RedCell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/RedCell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Region.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Region.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/ScheduleStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/ScheduleStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminSecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/EventPostResouce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/EventPostResouce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/UserSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/UserSecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/AdminAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/AdminAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/UserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/filters/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/filters/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/security/UserSecurityContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/security/UserSecurityContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/stock/StockResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/stock/StockResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/AuthenticationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/AuthenticationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/DonationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/DonationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/ScheduleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/ScheduleResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Events.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Events.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/UserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/UserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,27 +105,31 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="79" />
+          <entry key="java" value="187" />
+          <entry key="properties" value="1" />
           <entry key="vue" value="2" />
           <entry key="xhtml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="79" />
+          <entry key="JAVA" value="187" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="1" />
           <entry key="Vue.js" value="1" />
           <entry key="XHTML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="875" />
+          <entry key="java" value="5035" />
+          <entry key="properties" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="875" />
+          <entry key="JAVA" value="5035" />
+          <entry key="Properties" value="36" />
         </counts>
       </usages-collector>
     </session>
@@ -98,24 +140,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Donation.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/StockServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-431">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding>
-                <element signature="e#1246#1247#0" expanded="true" />
-                <element signature="e#1269#1270#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1341#1342#0" expanded="true" />
-                <element signature="e#1375#1376#0" expanded="true" />
-                <element signature="e#1400#1401#0" expanded="true" />
-                <element signature="e#1447#1448#0" expanded="true" />
-                <element signature="e#1481#1482#0" expanded="true" />
-                <element signature="e#1516#1517#0" expanded="true" />
-                <element signature="e#1541#1542#0" expanded="true" />
-                <element signature="e#1589#1590#0" expanded="true" />
-                <element signature="e#1623#1624#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="244">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -166,6 +194,7 @@
       <find>getters</find>
       <find>getter</find>
       <find>&lt;v-conten</find>
+      <find>Donation</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,22 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/signup-general.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/dto/RegionRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/RegionDaoImp.java" />
-        <option value="$PROJECT_DIR$/user-ui/src/pages/Profile.vue" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/DonationListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/ScheduleStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Schedule.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/ScheduleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ScheduleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/ScheduleDaoImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java" />
-        <option value="$PROJECT_DIR$/user-ui/src/pages/Overview.vue" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Region.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.xhtml" />
-        <option value="$PROJECT_DIR$/user-ui/src/pages/Scheduling.vue" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/MailServiceImp.java" />
         <option value="$PROJECT_DIR$/user-ui/config/index.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/EventPostDao.java" />
@@ -217,19 +230,35 @@
         <option value="$PROJECT_DIR$/user-ui/src/pages/Events.vue" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/security/Subscribable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/beans/AdminAuthentication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Stock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminSecurityFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/DonationResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/UserServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/ScheduleResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/BloodType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/TEst.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Plasma.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Platelet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/RedCell.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Platelet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Plasma.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Donation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/exceptions/StockException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Region.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Donation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/ScheduleResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/DonationListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/StockService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/DonationDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/DonationDaoImp.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/stock-config.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/stock/StockResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/StockExceptionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/StockServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/EntityNotFoundExceptionMapper.java" />
       </list>
     </option>
   </component>
@@ -341,7 +370,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
@@ -360,35 +389,14 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redhope" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
               <item name="redhope" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -403,6 +411,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="SearchEverywhereHistoryKey" value=".git&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/.gitignore&#10;store&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/store.js&#10;Login&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/pages/Login.vue&#10;map.s&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/map.svg&#10;persist&#9;ACTION&#9;ActivatePersistenceToolWindow&#10;svg&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/blood-drop.svg&#10;blood&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/blood-drop.svg&#10;web.xm&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/WEB-INF/web.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536667218271" />
     <property name="extract.method.default.visibility" value="private" />
@@ -413,12 +422,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.mql.redhope.buisness.impl" />
-      <recent name="com.mql.redhope.models" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/user-ui/src/store" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/user-ui/src/assets/img" />
@@ -431,8 +439,10 @@
       <recent name="com.mql.redhope.models" />
       <recent name="com.mql.redhope.web.admin" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/user-ui/src/store" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mql.redhope.domain.exceptions" />
+      <recent name="com.mql.redhope.buisness.impl" />
+      <recent name="com.mql.redhope.models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -697,7 +707,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184422000" />
+    <option name="totallyTimeSpent" value="194708000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -713,11 +732,11 @@
       <window_info id="Web" order="8" sideWeight="0.5083488" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32881662" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38482386" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39927733" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38482386" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39927733" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32971996" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.52919257" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -788,132 +807,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user-ui/src/store/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-ui/node_modules/vuex/types/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="108" column="2" selection-start-line="108" selection-start-column="2" selection-end-line="108" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-ui/src/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/persistence/Lob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/EventPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/EventPostServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="17" column="54" lean-forward="true" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-ui/src/pages/Dashboard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="79" column="19" lean-forward="true" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-ui/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-ui/src/pages/Events.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-ui/src/components/Header.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="162" lean-forward="true" selection-start-line="162" selection-end-line="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/security/Subscribable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/time/temporal/TemporalUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/time/temporal/IsoFields.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="642" column="24" selection-start-line="642" selection-start-column="24" selection-end-line="642" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/time/LocalDateTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="1181" column="25" selection-start-line="1181" selection-start-column="25" selection-end-line="1181" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/signup-general.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="57" column="86" selection-start-line="57" selection-start-column="75" selection-end-line="57" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/AdminAuthentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="39" column="3" lean-forward="true" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/UserSecured.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminSecured.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
@@ -956,13 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/persistence/MapKeyColumn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-96">
@@ -977,38 +863,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/ScheduleStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/ScheduleStatus.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Role.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Role.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="63" column="36" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1026,31 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminSecurityFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="39" column="18" lean-forward="true" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="100" column="25" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/AuthenticationResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
           <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/DonationResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
@@ -1061,13 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/ScheduleResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="189" selection-start-line="189" selection-end-line="189" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/UserResource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -1075,14 +912,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/BloodType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/BloodType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
@@ -1104,7 +934,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/TEst.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Stock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Stock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
@@ -1126,56 +956,267 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Plasma.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="1656">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/RedCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Platelet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Plasma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1008#1009#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Platelet.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/RedCell.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/exceptions/StockException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/Donation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-431">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="312">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#1246#1247#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1341#1342#0" expanded="true" />
-            <element signature="e#1375#1376#0" expanded="true" />
-            <element signature="e#1400#1401#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1481#1482#0" expanded="true" />
-            <element signature="e#1516#1517#0" expanded="true" />
-            <element signature="e#1541#1542#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-            <element signature="e#1623#1624#0" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#182#183#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/JAXRSConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="185" column="15" selection-start-line="185" selection-start-column="15" selection-end-line="185" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/ScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding>
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1789#1790#0" expanded="true" />
+            <element signature="e#1825#1826#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="745">
+          <caret line="89" column="24" lean-forward="true" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/DonationListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/ScheduleResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="887">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/AdminServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="63" column="14" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/DonationDaoImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="988">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/DonationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/stock-config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Donation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminSecurityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="39" column="11" lean-forward="true" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/user/DonationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/stock/StockResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="70" column="50" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/ws/rs/core/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="924" column="40" selection-start-line="924" selection-start-column="40" selection-end-line="924" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/StockExceptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/StockService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/EntityNotFoundExceptionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="22" column="17" lean-forward="true" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/StockServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
         </state>
       </provider>
     </entry>

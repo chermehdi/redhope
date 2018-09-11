@@ -1,8 +1,8 @@
 package com.mql.redhope.web.beans;
 
 import com.mql.redhope.buisness.UserService;
-import com.mql.redhope.dto.UserDto;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.dto.UserDto;
+import com.mql.redhope.domain.models.User;
 import java.io.Serializable;
 import java.util.Map;
 import javax.enterprise.context.RequestScoped;

@@ -2,8 +2,8 @@ package com.mql.redhope.web.user;
 
 import com.mql.redhope.buisness.TokenIssuer;
 import com.mql.redhope.buisness.UserService;
-import com.mql.redhope.dto.UserDto;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.dto.UserDto;
+import com.mql.redhope.domain.models.User;
 import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;

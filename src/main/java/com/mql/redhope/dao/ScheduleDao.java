@@ -1,6 +1,6 @@
 package com.mql.redhope.dao;
 
-import com.mql.redhope.models.Schedule;
+import com.mql.redhope.domain.models.Schedule;
 import java.util.List;
 
 /**

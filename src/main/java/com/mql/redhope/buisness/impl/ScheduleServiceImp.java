@@ -4,25 +4,21 @@ import com.mql.redhope.buisness.ScheduleService;
 import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.ScheduleDao;
 import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.dto.ScheduleDto;
-import com.mql.redhope.models.Donation;
-import com.mql.redhope.models.Region;
-import com.mql.redhope.models.Role;
-import com.mql.redhope.models.Schedule;
-import com.mql.redhope.models.ScheduleStatus;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.dto.ScheduleDto;
+import com.mql.redhope.domain.models.BloodType;
+import com.mql.redhope.domain.models.Region;
+import com.mql.redhope.domain.models.Role;
+import com.mql.redhope.domain.models.Schedule;
+import com.mql.redhope.domain.models.ScheduleStatus;
+import com.mql.redhope.domain.models.User;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Period;
 import java.time.ZoneId;
-import java.time.temporal.TemporalUnit;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.swing.text.html.Option;
 import org.slf4j.Logger;
 
 /**
@@ -85,11 +81,13 @@ public class ScheduleServiceImp implements ScheduleService {
   }
 
   @Override
-  public Optional<Schedule> markSchedule(Long id, String name) {
+  public Optional<Schedule> markSchedule(Long id, String name, String donationId, BloodType bloodType) {
     Schedule schedule = scheduleDao.findById(id);
     if(schedule == null) {
       return Optional.ofNullable(null);
     }
+    schedule.setDonationId(donationId);
+    schedule.setBloodType(bloodType);
     schedule.setStatus(ScheduleStatus.DONE);
     scheduleDao.update(schedule);
     return Optional.ofNullable(schedule);

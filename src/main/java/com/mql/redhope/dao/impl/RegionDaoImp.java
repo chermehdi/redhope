@@ -1,7 +1,7 @@
 package com.mql.redhope.dao.impl;
 
 import com.mql.redhope.dao.RegionDao;
-import com.mql.redhope.models.Region;
+import com.mql.redhope.domain.models.Region;
 import java.util.Collections;
 import java.util.List;
 import javax.ejb.Stateless;

@@ -1,14 +1,13 @@
 package com.mql.redhope.web.admin;
 
 import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.models.Role;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.Role;
+import com.mql.redhope.domain.models.User;
 import com.mql.redhope.web.admin.jwt.KeyGenerator;
 import com.mql.redhope.web.security.UserSecurityContext;
 import io.jsonwebtoken.Jwts;
 import java.io.IOException;
 import java.security.Key;
-import java.security.Principal;
 import javax.annotation.Priority;
 import javax.inject.Inject;
 import javax.ws.rs.NotAuthorizedException;
@@ -18,7 +17,6 @@ import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.SecurityContext;
 import javax.ws.rs.ext.Provider;
 import org.slf4j.Logger;
 

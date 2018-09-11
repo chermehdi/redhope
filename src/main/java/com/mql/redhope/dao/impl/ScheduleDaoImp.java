@@ -1,7 +1,7 @@
 package com.mql.redhope.dao.impl;
 
 import com.mql.redhope.dao.ScheduleDao;
-import com.mql.redhope.models.Schedule;
+import com.mql.redhope.domain.models.Schedule;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

@@ -1,7 +1,7 @@
 package com.mql.redhope.dao.impl;
 
 import com.mql.redhope.dao.TokenDao;
-import com.mql.redhope.models.Token;
+import com.mql.redhope.domain.models.Token;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;

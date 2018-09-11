@@ -1,8 +1,8 @@
 package com.mql.redhope.web.beans;
 
 import com.mql.redhope.buisness.AdminService;
-import com.mql.redhope.dto.UserDto;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.dto.UserDto;
+import com.mql.redhope.domain.models.User;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;

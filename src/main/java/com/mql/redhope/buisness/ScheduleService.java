@@ -1,7 +1,8 @@
 package com.mql.redhope.buisness;
 
-import com.mql.redhope.dto.ScheduleDto;
-import com.mql.redhope.models.Schedule;
+import com.mql.redhope.domain.dto.ScheduleDto;
+import com.mql.redhope.domain.models.BloodType;
+import com.mql.redhope.domain.models.Schedule;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,5 +17,5 @@ public interface ScheduleService {
 
   Optional<List<Schedule>> getAllSchedules(String email);
 
-  Optional<Schedule> markSchedule(Long id, String name);
+  Optional<Schedule> markSchedule(Long id, String name, String donationId, BloodType bloodType);
 }

@@ -1,11 +1,10 @@
 package com.mql.redhope.buisness;
 
-import com.mql.redhope.dto.UserDto;
-import com.mql.redhope.models.Donation;
-import com.mql.redhope.models.Profile;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.dto.UserDto;
+import com.mql.redhope.domain.models.Donation;
+import com.mql.redhope.domain.models.Profile;
+import com.mql.redhope.domain.models.User;
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.json.JsonObject;
 
 public interface UserService {

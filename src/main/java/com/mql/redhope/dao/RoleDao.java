@@ -1,6 +1,6 @@
 package com.mql.redhope.dao;
 
-import com.mql.redhope.models.Role;
+import com.mql.redhope.domain.models.Role;
 
 public interface RoleDao extends AbstractDao<Role> {
 

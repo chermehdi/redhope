@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.time.LocalDate;
 import javax.persistence.Entity;
@@ -29,6 +29,11 @@ public class Schedule {
 
   @Enumerated
   private ScheduleStatus status = ScheduleStatus.PENDING;
+
+  private String donationId;
+
+  @Enumerated
+  private BloodType bloodType;
 
   public Schedule() {}
 
@@ -76,5 +81,21 @@ public class Schedule {
 
   public void setStatus(ScheduleStatus status) {
     this.status = status;
+  }
+
+  public String getDonationId() {
+    return donationId;
+  }
+
+  public void setDonationId(String donationId) {
+    this.donationId = donationId;
+  }
+
+  public void setBloodType(BloodType bloodType) {
+    this.bloodType = bloodType;
+  }
+
+  public BloodType getBloodType() {
+    return bloodType;
   }
 }

@@ -1,8 +1,8 @@
 package com.mql.redhope.web.user;
 
 import com.mql.redhope.buisness.UserService;
-import com.mql.redhope.models.BloodType;
-import com.mql.redhope.models.Profile;
+import com.mql.redhope.domain.models.BloodType;
+import com.mql.redhope.domain.models.Profile;
 import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
 import javax.inject.Inject;

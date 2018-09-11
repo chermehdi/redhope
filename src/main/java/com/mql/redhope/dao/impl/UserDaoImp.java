@@ -1,7 +1,7 @@
 package com.mql.redhope.dao.impl;
 
 import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.User;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;

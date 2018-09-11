@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.io.Serializable;
 import java.util.Optional;

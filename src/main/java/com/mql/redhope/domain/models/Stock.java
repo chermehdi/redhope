@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -9,7 +9,6 @@ import javax.persistence.EnumType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MapKeyColumn;
 import javax.persistence.MapKeyEnumerated;
 import javax.persistence.OneToOne;
 

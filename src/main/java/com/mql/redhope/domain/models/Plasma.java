@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * @author mehdithe
  */
 @Entity
-public class RedCell {
+public class Plasma {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,7 +21,11 @@ public class RedCell {
   // this is in ml
   private long quantity;
 
-  public RedCell() {}
+  private boolean removed = false;
+
+  public Plasma() {
+    createdAt = LocalDateTime.now();
+  }
 
   public Long getId() {
     return id;
@@ -45,5 +49,13 @@ public class RedCell {
 
   public void setQuantity(long quantity) {
     this.quantity = quantity;
+  }
+
+  public boolean isRemoved() {
+    return removed;
+  }
+
+  public void setRemoved(boolean removed) {
+    this.removed = removed;
   }
 }

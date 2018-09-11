@@ -1,4 +1,4 @@
-package com.mql.redhope.dto;
+package com.mql.redhope.domain.dto;
 
 import java.util.Date;
 import javax.validation.constraints.NotNull;

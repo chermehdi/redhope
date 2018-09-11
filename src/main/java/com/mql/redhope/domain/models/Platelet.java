@@ -1,4 +1,4 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
@@ -21,7 +21,11 @@ public class Platelet {
   // this is in ml
   private long quantity;
 
-  public Platelet() {}
+  private boolean removed = false;
+
+  public Platelet() {
+    createdAt = LocalDateTime.now();
+  }
 
   public Long getId() {
     return id;
@@ -45,5 +49,13 @@ public class Platelet {
 
   public void setQuantity(long quantity) {
     this.quantity = quantity;
+  }
+
+  public boolean isRemoved() {
+    return removed;
+  }
+
+  public void setRemoved(boolean removed) {
+    this.removed = removed;
   }
 }

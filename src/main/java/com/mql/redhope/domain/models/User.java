@@ -1,14 +1,12 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import com.mql.redhope.web.security.Subscribable;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalUnit;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.Vector;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -45,7 +43,6 @@ public class User implements Serializable, Subscribable {
   @ManyToMany(fetch = FetchType.EAGER)
   private Set<Role> roles = new HashSet<>();
 
-
   @OneToOne(cascade = CascadeType.ALL)
   private Profile profile;
 
@@ -53,7 +50,7 @@ public class User implements Serializable, Subscribable {
   @XmlTransient
   private Token token;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.EAGER)
   @XmlTransient
   private Region region;
 

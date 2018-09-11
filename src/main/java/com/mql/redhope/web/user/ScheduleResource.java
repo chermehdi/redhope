@@ -1,10 +1,11 @@
 package com.mql.redhope.web.user;
 
 import com.mql.redhope.buisness.ScheduleService;
-import com.mql.redhope.dto.ScheduleDto;
-import com.mql.redhope.models.Schedule;
-import com.mql.redhope.models.ScheduleStatus;
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.dto.ScheduleDto;
+import com.mql.redhope.domain.models.BloodType;
+import com.mql.redhope.domain.models.Schedule;
+import com.mql.redhope.domain.models.ScheduleStatus;
+import com.mql.redhope.domain.models.User;
 import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import java.util.stream.Collectors;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Event;
 import javax.inject.Inject;
+import javax.json.JsonObject;
 import javax.validation.Valid;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -116,13 +118,17 @@ public class ScheduleResource {
     return Response.status(Status.UNAUTHORIZED).build();
   }
 
-  @GET
+  @POST
   @UserSecured
   @Path("mark/{id}")
-  public Response markScheduleAsDone(@PathParam("id") Long id, @Context SecurityContext context) {
+  public Response markScheduleAsDone(@PathParam("id") Long id, JsonObject payload,
+      @Context SecurityContext context) {
     logger.info("trying to mark schedule with id " + id);
+    // TODO: refactor this
+    String donationId = payload.getString("donationId");
+    BloodType bloodType = BloodType.from(payload.getString("bloodType"));
     Principal principal = context.getUserPrincipal();
-    Optional<Schedule> schedule = scheduleService.markSchedule(id, principal.getName());
+    Optional<Schedule> schedule = scheduleService.markSchedule(id, principal.getName(), donationId, bloodType);
     if (schedule.isPresent()) {
       donationEvent.fire(schedule.get());
       return Response.ok(schedule).build();

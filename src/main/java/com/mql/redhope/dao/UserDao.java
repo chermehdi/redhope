@@ -1,6 +1,6 @@
 package com.mql.redhope.dao;
 
-import com.mql.redhope.models.User;
+import com.mql.redhope.domain.models.User;
 
 public interface UserDao extends AbstractDao<User> {
 

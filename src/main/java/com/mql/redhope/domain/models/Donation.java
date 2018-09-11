@@ -1,8 +1,9 @@
-package com.mql.redhope.models;
+package com.mql.redhope.domain.models;
 
 import java.time.LocalDateTime;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -23,16 +24,19 @@ public class Donation {
   @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private Region region;
 
-  @OneToOne(fetch = FetchType.EAGER)
+  @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private Plasma plasma;
 
-  @OneToOne(fetch = FetchType.EAGER)
+  @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private RedCell redCells;
 
-  @OneToOne(fetch = FetchType.EAGER)
+  @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private Platelet platelet;
 
   private String donationId;
+
+  @Enumerated
+  private BloodType type = BloodType.UNSET;
 
   public Donation() {
     createdAt = LocalDateTime.now();
@@ -96,5 +100,13 @@ public class Donation {
 
   public void setDonationId(String donationId) {
     this.donationId = donationId;
+  }
+
+  public BloodType getType() {
+    return type;
+  }
+
+  public void setType(BloodType type) {
+    this.type = type;
   }
 }

@@ -1,7 +1,7 @@
 package com.mql.redhope.dao.impl;
 
 import com.mql.redhope.dao.EventPostDao;
-import com.mql.redhope.models.EventPost;
+import com.mql.redhope.domain.models.EventPost;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

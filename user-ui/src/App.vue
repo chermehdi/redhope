@@ -41,6 +41,9 @@
   @import "assets/css/now-ui-kit.css";
   @import "assets/css/vuetify.min.css";
 
+  body {
+    background-color: white;
+  }
   * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -48,6 +51,7 @@
 
   .wrapper__outer {
     margin-top: 7rem;
+    background-color: white;
   }
 
   .fade-enter-active,
@@ -72,5 +76,8 @@
   .list.pt-0.list--dense div:hover {
     transition: all .4s ease;
     background-color: #ddd;
+  }
+  .application--wrap {
+    background-color: white;
   }
 </style>

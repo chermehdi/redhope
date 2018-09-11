@@ -1,5 +1,6 @@
 
-]squid:UselessImportCheck"-Remove this unused import 'java.util.Vector'.(ÿŒ¸Áÿÿÿÿÿ8¤ª‰äÁ,
-Esquid:S1948*"'Make "roles" transient or serializable.(ÁÀö»8üÇ’Ğ¾,
-Fsquid:S19485"(Make "region" transient or serializable.(ïš×‘8üÇ’Ğ¾,
-Isquid:S19489"+Make "donations" transient or serializable.(ÉÒ8¤ª‰äÁ,
+Esquid:S1948."'Make "roles" transient or serializable.(ÁÀö»8üÇ’Ğ¾,
+Fsquid:S1948:"(Make "region" transient or serializable.(ïš×‘8üÇ’Ğ¾,
+]squid:UselessImportCheck"-Remove this unused import 'java.util.Vector'.(ÿŒ¸Áÿÿÿÿÿ8¤ª‰äÁ,
+Isquid:S1948>"+Make "donations" transient or serializable.(ÉÒ8¤ª‰äÁ,
+lsquid:UselessImportCheck"<Remove this unused import 'java.time.temporal.TemporalUnit'.(¨çùÿÿÿÿÿÿ8¸¸íÜ,

@@ -37,13 +37,31 @@ public class DonationResource {
   @GET
   @UserSecured
   public List<DonationDto> allDonations(@Context SecurityContext context) {
-
     List<DonationDto> donations = userService
         .getUserDonations(context.getUserPrincipal().getName())
         .stream()
         .map(DonationDto::new)
         .collect(Collectors.toList());
     return donations;
+  }
+
+  @POST
+  @Path("create")
+  @UserSecured
+  public Response createDonation(@Context SecurityContext context) {
+    Principal principal = context.getUserPrincipal();
+    Donation donation = new Donation();
+    userService.addDonationToUser(principal.getName(), donation);
+    return Response.created(uriInfo.getAbsolutePath()).build();
+  }
+
+  private JsonObject convertDonationToDto(Donation donation) {
+    JsonObject object = Json.createObjectBuilder()
+        .add("createdAt", donation.getCreatedAt().toString())
+        .add("region",
+            Json.createObjectBuilder().add("name", donation.getRegion().getName()).build())
+        .build();
+    return object;
   }
 
   class DonationDto {
@@ -72,24 +90,4 @@ public class DonationResource {
       this.regionName = regionName;
     }
   }
-
-  @POST
-  @Path("create")
-  @UserSecured
-  public Response createDonation(@Context SecurityContext context) {
-    Principal principal = context.getUserPrincipal();
-    Donation donation = new Donation();
-    userService.addDonationToUser(principal.getName(), donation);
-    return Response.created(uriInfo.getAbsolutePath()).build();
-  }
-
-  private JsonObject convertDonationToDto(Donation donation) {
-    JsonObject object = Json.createObjectBuilder()
-        .add("createdAt", donation.getCreatedAt().toString())
-        .add("region",
-            Json.createObjectBuilder().add("name", donation.getRegion().getName()).build())
-        .build();
-    return object;
-  }
-
 }

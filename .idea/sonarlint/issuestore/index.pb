@@ -95,8 +95,6 @@ h
 8src/main/java/com/mql/redhope/web/admin/JAXRSConfig.java,f/4/f4d8b4c9577083bc300192510a4dfb273009ad13
 [
 +src/main/resources/security-keys.properties,3/6/36ec9597398f4c455b84fc01d1ac001308cfa40a
-d
-4src/main/java/com/mql/redhope/web/admin/Secured.java,c/8/c890520fabde475b9a48241ec377e416ce32d597
 t
 Dsrc/main/java/com/mql/redhope/web/admin/jwt/DefaultKeyGenerator.java,9/5/951314cefd3c913962014723a01b29da9de0b5f4
 m
@@ -105,8 +103,6 @@ g
 7src/main/java/com/mql/redhope/web/admin/CorsFilter.java,d/2/d299a24dea31645282de0d00ca09efe830f70e49
 Y
 )src/main/webapp/resources/img/loading.svg,a/f/aff980fcd2910e0e94e572fc50cfc0dff6fc15d8
-k
-;src/main/java/com/mql/redhope/web/admin/SecurityFilter.java,9/0/90563ae11b871fcd91ac71763eaecdc07a10c2e2
 g
 7src/main/java/com/mql/redhope/buisness/TokenIssuer.java,8/f/8fc2df3c4752aeda75853921caca1976e6126cdd
 j
@@ -148,8 +144,6 @@ Q
 !user-ui/src/components/Header.vue,1/b/1bcd44fbf76335d7af2eb55905e2dbf48f462156
 L
 user-ui/src/pages/Signup.vue,b/3/b37aa11c4dee02b066bc9eb635fa2dffe62c03ae
-D
-user-ui/src/store.js,1/1/11f75bd075808ab5c9045e2d0c62d08572218e14
 K
 user-ui/src/router/index.js,f/2/f25a36d5b39ef0b3e84a166afb2612e1096ecc5d
 K
@@ -192,3 +186,27 @@ s
 Csrc/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java,e/9/e953472eb3b124b2ae1d37a1d2f8ccbfd8337892
 l
 <src/main/java/com/mql/redhope/web/user/ScheduleResource.java,b/7/b7a10dc46a7ce487e324caaecfbf57ac36d0aad6
+L
+user-ui/src/pages/Events.vue,e/a/eacff0dced81440c721eda52316bea83c5439ad1
+l
+<src/main/java/com/mql/redhope/web/security/Subscribable.java,8/5/85355233f438408bfab86360076f981d84b303c7
+h
+8src/main/java/com/mql/redhope/web/admin/UserSecured.java,0/8/08a21650b30e6c872b43107a34dd3f8cfc746224
+i
+9src/main/java/com/mql/redhope/web/admin/AdminSecured.java,d/7/d7a3d95f051fd0b6de53f5a03a99558754142cc0
+m
+=src/main/java/com/mql/redhope/web/admin/EventPostResouce.java,c/5/c5f7b7bbfb8f2675dd6742fd0038ed74297cb09d
+s
+Csrc/main/java/com/mql/redhope/web/security/UserSecurityContext.java,5/2/52aa7de77f17c8993fb764950ef45078967daca8
+o
+?src/main/java/com/mql/redhope/web/admin/UserSecurityFilter.java,c/d/cd85bcce9b42d3aa9c2b83e620b22c0c13ddbb8f
+O
+user-ui/src/components/Card.vue,2/1/21fef03f7994efa36a8cc945011a8789a87fd095
+_
+/src/main/java/com/mql/redhope/models/Stock.java,1/b/1bd262a4f11ce7fb47bb6f252daa1895939a03ea
+^
+.src/main/java/com/mql/redhope/models/Role.java,0/1/01464859f61d826b7ce67dfb52673450505672ca
+p
+@src/main/java/com/mql/redhope/web/admin/AdminSecurityFilter.java,e/3/e3cd02fa62c1428c3cee1e13cbeeddb473caf7ad
+j
+:src/main/java/com/mql/redhope/web/user/RegionResource.java,6/7/67ad9572145ae829fe7473f50d42511d10bc4c1d

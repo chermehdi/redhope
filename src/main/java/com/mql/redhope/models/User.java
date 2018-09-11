@@ -1,6 +1,10 @@
 package com.mql.redhope.models;
 
+import com.mql.redhope.web.security.Subscribable;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -23,7 +27,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @Entity
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class User implements Serializable {
+public class User implements Serializable, Subscribable {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -164,6 +168,10 @@ public class User implements Serializable {
         '}';
   }
 
-
+  @Override
+  public LocalDateTime activeUntil() {
+    // this should mark the date when an administrator's subscription is going to expire
+    return LocalDateTime.now().plus(3, ChronoUnit.MONTHS);
+  }
 }
 

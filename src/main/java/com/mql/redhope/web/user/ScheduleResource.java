@@ -116,14 +116,14 @@ public class ScheduleResource {
     return Response.status(Status.UNAUTHORIZED).build();
   }
 
-  @Path("mark/{id}")
   @GET
   @UserSecured
+  @Path("mark/{id}")
   public Response markScheduleAsDone(@PathParam("id") Long id, @Context SecurityContext context) {
     logger.info("trying to mark schedule with id " + id);
     Principal principal = context.getUserPrincipal();
     Optional<Schedule> schedule = scheduleService.markSchedule(id, principal.getName());
-    if(schedule.isPresent()) {
+    if (schedule.isPresent()) {
       donationEvent.fire(schedule.get());
       return Response.ok(schedule).build();
     }
@@ -187,5 +187,4 @@ public class ScheduleResource {
       this.status = status;
     }
   }
-
 }

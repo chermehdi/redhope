@@ -9,7 +9,6 @@ import com.mql.redhope.dao.RegionDao;
 import com.mql.redhope.dao.RoleDao;
 import com.mql.redhope.dao.ScheduleDao;
 import com.mql.redhope.dao.UserDao;
-import com.mql.redhope.dto.ScheduleDto;
 import com.mql.redhope.models.BloodType;
 import com.mql.redhope.models.Donation;
 import com.mql.redhope.models.EventPost;
@@ -20,10 +19,7 @@ import com.mql.redhope.models.Schedule;
 import com.mql.redhope.models.ScheduleStatus;
 import com.mql.redhope.models.User;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -102,7 +98,7 @@ public class DataBaseSeeder {
     donorProfile.setLastName("cheracher");
     adminProfile.setReceiveEmails(true);
     adminProfile.setAddress("221B Baker street");
-    adminProfile.setType(BloodType.A);
+    adminProfile.setType(BloodType.A_PLUS);
     adminProfile.setPhone("0634411218");
     admin.setProfile(adminProfile);
     donor.setProfile(donorProfile);
@@ -113,52 +109,8 @@ public class DataBaseSeeder {
     donor.setRegion(regions.get(1));
     userDao.save(admin);
     userDao.save(donor);
-//    logger.info("Database Seeder invoked ");
-//    Faker faker = new Faker();
-//    List<User> fakeUsers = createFakeUsers(faker);
-//    List<User> fakeRabatUsers = createFakeUsers(faker);
-//    System.out.println("Database Seeder called !");
-//    User u = new User("mehdi.cheracher@gmail.com", encoder.encode("mehdi"));
-//    u.setActive(true);
-//    Role userRole = new Role("USER");
-//    Role adminRole = new Role("ADMIN");
-//    roleDao.save(adminRole);
-//    roleDao.save(userRole);
-//    u.setRoles(new HashSet<>(Arrays.asList(adminRole, userRole)));
-//    Profile profile = new Profile();
-//    profile.setFirstName("mehdi");
-//    profile.setLastName("cheracher");
-//    profile.setType(BloodType.A);
-//    profile.setAddress("221B baker street");
-//    profile.setPhone("+212-634411218");
-//    profileDao.save(profile);
-//    u.setProfile(profile);
-//    Region r = new Region();
-//    r.setName("Fes-Meknes");
-//    r.getUsers().add(u);
-//    Region rabat = new Region();
-//    rabat.setName("Rabat");
-//    rabat.getUsers().add(u);
-//    u.setRegion(r);
-//    Donation donation = new Donation(LocalDateTime.now().minusMonths(5));
-//    regionDao.save(r);
-//    donation.setRegion(r);
-//    donationDao.save(donation);
-//    u.getDonations().add(donation);
-//    userDao.save(u);
-//    logger.info("saving user " + u);
-//    fakeUsers.forEach(System.out::println);
-//    for (User user : fakeUsers) {
-//      r.getUsers().add(user);
-//      user.setRegion(r);
-//    }
-//    for (User user : fakeRabatUsers) {
-//      rabat.getUsers().add(user);
-//      user.setRegion(rabat);
-//    }
-//    regionDao.save(rabat);
     createFakeUsers(faker);
-    for(int i = 0; i < 20; i++) {
+    for (int i = 0; i < 5; i++) {
       EventPost newPost = EventPost.of(faker.lorem().characters(20));
       eventPostDao.save(newPost);
     }
@@ -178,7 +130,7 @@ public class DataBaseSeeder {
 
   private List<User> createFakeUsers(Faker faker) {
     List<User> users = new ArrayList<>();
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
       User cur = new User();
       cur.setActive(true);
       cur.setEmail(faker.internet().emailAddress());
@@ -209,10 +161,10 @@ public class DataBaseSeeder {
 
   private BloodType randomBloodType() {
     BloodType[] r = new BloodType[4];
-    r[0] = BloodType.A;
-    r[1] = BloodType.B;
-    r[2] = BloodType.B;
-    r[3] = BloodType.O;
+    r[0] = BloodType.A_PLUS;
+    r[1] = BloodType.B_PLUS;
+    r[2] = BloodType.B_PLUS;
+    r[3] = BloodType.O_PLUS;
     return r[rnd.nextInt(4)];
   }
 

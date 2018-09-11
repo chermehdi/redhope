@@ -23,6 +23,17 @@ public class Donation {
   @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   private Region region;
 
+  @OneToOne(fetch = FetchType.EAGER)
+  private Plasma plasma;
+
+  @OneToOne(fetch = FetchType.EAGER)
+  private RedCell redCells;
+
+  @OneToOne(fetch = FetchType.EAGER)
+  private Platelet platelet;
+
+  private String donationId;
+
   public Donation() {
     createdAt = LocalDateTime.now();
   }
@@ -55,4 +66,35 @@ public class Donation {
     this.region = region;
   }
 
+  public Plasma getPlasma() {
+    return plasma;
+  }
+
+  public void setPlasma(Plasma plasma) {
+    this.plasma = plasma;
+  }
+
+  public RedCell getRedCells() {
+    return redCells;
+  }
+
+  public void setRedCells(RedCell redCells) {
+    this.redCells = redCells;
+  }
+
+  public Platelet getPlatelet() {
+    return platelet;
+  }
+
+  public void setPlatelet(Platelet platelet) {
+    this.platelet = platelet;
+  }
+
+  public String getDonationId() {
+    return donationId;
+  }
+
+  public void setDonationId(String donationId) {
+    this.donationId = donationId;
+  }
 }

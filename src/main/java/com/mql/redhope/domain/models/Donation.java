@@ -109,4 +109,12 @@ public class Donation {
   public void setType(BloodType type) {
     this.type = type;
   }
+
+  /**
+   * @return true if the we can add other components to the donations such as plasma, red cells ...
+   * and false otherwise
+   */
+  public boolean isValid() {
+    return (donationId != null) && (plasma == null || platelet == null || redCells == null);
+  }
 }

@@ -62,4 +62,12 @@ public class ProfileDaoImp implements ProfileDao {
   public Profile update(Profile profile) {
     return em.merge(profile);
   }
+
+  @Override
+  public Profile findUserProfile(String userEmail) {
+    TypedQuery<Profile> query = em
+        .createQuery("SELECT u.profile from User u WHERE u.email = :email", Profile.class);
+    query.setParameter("email", userEmail);
+    return query.getSingleResult();
+  }
 }

@@ -1,7 +1,11 @@
 package com.mql.redhope.web.user;
 
+import com.mql.redhope.buisness.AdminService;
+import com.mql.redhope.buisness.StockService;
 import com.mql.redhope.buisness.UserService;
 import com.mql.redhope.domain.models.Donation;
+import com.mql.redhope.domain.models.User;
+import com.mql.redhope.web.admin.AdminSecured;
 import com.mql.redhope.web.admin.UserSecured;
 import java.security.Principal;
 import java.util.List;
@@ -31,6 +35,12 @@ public class DonationResource {
   @Inject
   UserService userService;
 
+  @Inject
+  AdminService adminService;
+
+  @Inject
+  StockService stockService;
+
   @Context
   UriInfo uriInfo;
 
@@ -43,6 +53,20 @@ public class DonationResource {
         .map(DonationDto::new)
         .collect(Collectors.toList());
     return donations;
+  }
+
+  @GET
+  @Path("ids")
+  @AdminSecured
+  public Response getDonationIds(@Context SecurityContext context) {
+    String adminEmail = context.getUserPrincipal().getName();
+    User admin = adminService.getEmailInformations(adminEmail);
+    List<String> allDonationsIds = stockService.getAllDonationForRegion(admin.getRegion().getName())
+        .stream()
+        .filter(Donation::isValid)
+        .map(Donation::getDonationId)
+        .collect(Collectors.toList());
+    return Response.ok(allDonationsIds).build();
   }
 
   @POST

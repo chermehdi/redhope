@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.security.Key;
 import javax.annotation.Priority;
 import javax.inject.Inject;
+import javax.persistence.EntityNotFoundException;
 import javax.ws.rs.NotAuthorizedException;
 import javax.ws.rs.Priorities;
 import javax.ws.rs.container.ContainerRequestContext;
@@ -57,13 +58,12 @@ public class UserSecurityFilter implements ContainerRequestFilter {
 
       User user = userDao.findByEmail(email);
       // any regular user is allowed to view the resource
-      if(user == null) {
-        throw new RuntimeException();
+      if (user == null) {
+        throw new EntityNotFoundException("Could not find user for given token");
       }
       // create the request context object
       requestContext.setSecurityContext(new UserSecurityContext(user));
       logger.info("#### valid token : " + authorizationHeader);
-
     } catch (Exception e) {
       logger.info("#### invalid token : " + authorizationHeader);
       requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());

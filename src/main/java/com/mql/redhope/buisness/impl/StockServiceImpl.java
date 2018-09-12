@@ -97,19 +97,27 @@ public class StockServiceImpl implements StockService {
       JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
       long sumPlasma = byBloodType.get(type).stream().map(donation -> donation.getPlasma())
           .filter(plasma -> plasma != null)
+          .filter(plasma -> !plasma.isRemoved())
           .mapToLong(plasma -> plasma.getQuantity()).sum();
       objectBuilder.add("plasma", sumPlasma);
       long sumPlatelet = byBloodType.get(type).stream().map(donation -> donation.getPlatelet())
           .filter(platelet -> platelet != null)
+          .filter(platelet -> !platelet.isRemoved())
           .mapToLong(platelet -> platelet.getQuantity()).sum();
       objectBuilder.add("platelet", sumPlatelet);
       long redCellSum = byBloodType.get(type).stream().map(donation -> donation.getRedCells())
           .filter(redCell -> redCell != null)
+          .filter(redCell -> !redCell.isRemoved())
           .mapToLong(redCell -> redCell.getQuantity()).sum();
       objectBuilder.add("redCell", redCellSum);
       builder.add(type.name(), objectBuilder);
     });
     return builder.build();
+  }
+
+  @Override
+  public List<Donation> getAllDonationForRegion(String regionName) {
+    return donationDao.findByRegionName(regionName);
   }
 
   private boolean isBitSet(long mask, long l) {
@@ -119,7 +127,7 @@ public class StockServiceImpl implements StockService {
   private List<BloodType> getBloodTypes() {
     return Arrays.asList(BloodType.A_PLUS, BloodType.A_MINUS,
         BloodType.B_PLUS, BloodType.B_MINUS,
-        BloodType.O_PLUS, BloodType.O_PLUS,
+        BloodType.O_PLUS, BloodType.O_MINUS,
         BloodType.AB_PLUS, BloodType.AB_MINUS);
   }
 }

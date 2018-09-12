@@ -33,6 +33,7 @@ public class User implements Serializable, Subscribable {
 
   private String email;
 
+  @XmlTransient
   private String password;
 
   private Date createdAt;

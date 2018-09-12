@@ -30,7 +30,7 @@ public class DefaultTokenIssuer implements TokenIssuer {
         .setSubject(email)
         .setIssuer(uriInfo.getAbsolutePath().toString())
         .setIssuedAt(new Date())
-        .setExpiration(toDate(LocalDateTime.now().plusMinutes(60L)))
+        .setExpiration(toDate(LocalDateTime.now().plusMinutes(6 * 60L)))
         .signWith(SignatureAlgorithm.HS512, key)
         .compact();
     logger.info("#### generating token for a key : " + jwtToken + " - " + key);

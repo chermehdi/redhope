@@ -63,6 +63,9 @@ public class AdminServiceImp implements AdminService {
   @Override
   public User getEmailInformations(String email) {
     User user = userDao.findByEmail(email);
+    if(user == null) {
+      throw new SecurityException("Admin not found");
+    }
     return user;
   }
 }

@@ -5,4 +5,6 @@ import com.mql.redhope.domain.models.Profile;
 public interface ProfileDao extends AbstractDao<Profile> {
 
   Profile update(Profile profile);
+
+  Profile findUserProfile(String userEmail);
 }

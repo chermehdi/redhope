@@ -62,10 +62,10 @@ public class AdminSecurityFilter implements ContainerRequestFilter {
           .filter(this::isAdminRole)
           .findAny()
           .isPresent();
-      logger.info("the current user " + currentUser);
       // if the current user is not an admin throw a runtime exception, so the execution is aborted
       if (!isAdmin) {
-        throw new RuntimeException("the user is not an administrator");
+        throw new SecurityException(
+            "The current User is not an administrator, use and admin account to access this resource");
       }
       // create the request context object
       requestContext.setSecurityContext(new UserSecurityContext(currentUser));

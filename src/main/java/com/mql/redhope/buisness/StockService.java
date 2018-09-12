@@ -1,6 +1,7 @@
 package com.mql.redhope.buisness;
 
 import com.mql.redhope.domain.models.Donation;
+import java.util.List;
 import javax.json.JsonObject;
 
 /**
@@ -35,4 +36,11 @@ public interface StockService {
    * @param regionName name of the target region
    */
   JsonObject getStockInfo(String regionName);
+
+  /**
+   * return the list of all the donations for a given region
+   *
+   * @param regionName the name of the target region
+   */
+  List<Donation> getAllDonationForRegion(String regionName);
 }

@@ -63,6 +63,7 @@
 
   .event__content {
     padding: 1rem;
+    font-size: 2.4rem !important;
   }
 
   .card__decorator {

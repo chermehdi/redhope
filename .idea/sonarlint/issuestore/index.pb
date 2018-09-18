@@ -222,3 +222,11 @@ h
 Osrc/main/java/com/mql/redhope/web/exceptions/EntityNotFoundExceptionMapper.java,5/7/578b12d707943577eaccb14fec4cfb4cf83b132d
 q
 Asrc/main/java/com/mql/redhope/buisness/impl/StockServiceImpl.java,c/2/c287acb7111bd5d130d1436314d4058281f0fcb4
+v
+Fsrc/main/java/com/mql/redhope/domain/exceptions/SecurityException.java,e/7/e7c7339838e7c16238a641d357ed3e474ecd7a5f
+y
+Isrc/main/java/com/mql/redhope/web/exceptions/SecurityExceptionMapper.java,4/1/41fc0e1010ff187d2e41865e51e5b3186a648391
+j
+:src/main/java/com/mql/redhope/domain/models/BloodType.java,f/f/ff34b7c8189127a2a20fe318cffd6b89121e3655
+[
++src/main/resources/assets-config.properties,f/9/f98ecd87c87357e24d6b93978fd9705eefa271fe

@@ -12,7 +12,10 @@ import com.mql.redhope.dao.UserDao;
 import com.mql.redhope.domain.models.BloodType;
 import com.mql.redhope.domain.models.Donation;
 import com.mql.redhope.domain.models.EventPost;
+import com.mql.redhope.domain.models.Plasma;
+import com.mql.redhope.domain.models.Platelet;
 import com.mql.redhope.domain.models.Profile;
+import com.mql.redhope.domain.models.RedCell;
 import com.mql.redhope.domain.models.Region;
 import com.mql.redhope.domain.models.Role;
 import com.mql.redhope.domain.models.Schedule;
@@ -23,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -183,17 +187,38 @@ public class DataBaseSeeder {
 
   private void generateDonationsForUser(User user) {
     List<Schedule> schedules = scheduleDao.findAll();
+    Region regionRabat = regionDao.findByName("Rabat");
     for (Schedule schedule : schedules) {
       if (schedule.getStatus() == ScheduleStatus.DONE) {
         Donation donation = new Donation();
-        donation.setDonationId("abcde" + counter++);
+        donation.setDonationId(UUID.randomUUID().toString().toLowerCase());
         donation.setCreatedAt(schedule.getTime().atStartOfDay());
-        donation.setRegion(schedule.getRegion());
+        donation.setRegion(regionRabat);
+        donation.setType(randomBloodType());
+        setupDonationProperties(donation);
         donationDao.save(donation);
         user.getDonations().add(donation);
       }
     }
     userDao.update(user);
+  }
+
+  private void setupDonationProperties(Donation donation) {
+    if (rnd.nextBoolean()) {
+      Platelet platelet = new Platelet();
+      platelet.setQuantity(1000L);
+      donation.setPlatelet(platelet);
+    }
+    if (rnd.nextBoolean()) {
+      Plasma plasma = new Plasma();
+      plasma.setQuantity(rnd.nextInt(10000));
+      donation.setPlasma(plasma);
+    }
+    if (rnd.nextBoolean()) {
+      RedCell redCell = new RedCell();
+      redCell.setQuantity(rnd.nextInt(10000));
+      donation.setRedCells(redCell);
+    }
   }
 
   private ScheduleStatus getRandomStatus() {

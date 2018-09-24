@@ -73,6 +73,8 @@ public class DataBaseSeeder {
 
   static int counter = 1;
 
+  User admin;
+
   @PostConstruct
   public void init() {
     Role userRole = new Role("USER");
@@ -88,7 +90,7 @@ public class DataBaseSeeder {
       regions.add(region);
     }
     logger.info("the regions " + regions);
-    User admin = new User();
+    admin = new User();
     User donor = new User();
     admin.setEmail("mehdi.cheracher@gmail.com");
     donor.setEmail("mehdi@gmail.com");
@@ -166,16 +168,18 @@ public class DataBaseSeeder {
   }
 
   private BloodType randomBloodType() {
-    BloodType[] r = new BloodType[4];
+    BloodType[] r = new BloodType[6];
     r[0] = BloodType.A_PLUS;
     r[1] = BloodType.B_PLUS;
-    r[2] = BloodType.B_PLUS;
-    r[3] = BloodType.O_PLUS;
-    return r[rnd.nextInt(4)];
+    r[2] = BloodType.AB_PLUS;
+    r[3] = BloodType.B_PLUS;
+    r[4] = BloodType.O_PLUS;
+    r[5] = BloodType.O_MINUS;
+    return r[rnd.nextInt(5)];
   }
 
   private void generateScheduleForUser(User user) {
-    for (int i = 0; i < rnd.nextInt(10); i++) {
+    for (int i = 0; i < 10; i++) {
       Schedule schedule = new Schedule();
       schedule.setStatus(getRandomStatus());
       schedule.setRegion(user.getRegion());
@@ -187,13 +191,13 @@ public class DataBaseSeeder {
 
   private void generateDonationsForUser(User user) {
     List<Schedule> schedules = scheduleDao.findAll();
-    Region regionRabat = regionDao.findByName("Rabat");
+    Region regionRabat = regionDao.findByName("F");
     for (Schedule schedule : schedules) {
       if (schedule.getStatus() == ScheduleStatus.DONE) {
         Donation donation = new Donation();
         donation.setDonationId(UUID.randomUUID().toString().toLowerCase());
         donation.setCreatedAt(schedule.getTime().atStartOfDay());
-        donation.setRegion(regionRabat);
+        donation.setRegion(admin.getRegion());
         donation.setType(randomBloodType());
         setupDonationProperties(donation);
         donationDao.save(donation);
@@ -206,17 +210,17 @@ public class DataBaseSeeder {
   private void setupDonationProperties(Donation donation) {
     if (rnd.nextBoolean()) {
       Platelet platelet = new Platelet();
-      platelet.setQuantity(1000L);
+      platelet.setQuantity(rnd.nextInt(3000));
       donation.setPlatelet(platelet);
     }
     if (rnd.nextBoolean()) {
       Plasma plasma = new Plasma();
-      plasma.setQuantity(rnd.nextInt(10000));
+      plasma.setQuantity(rnd.nextInt(3000));
       donation.setPlasma(plasma);
     }
     if (rnd.nextBoolean()) {
       RedCell redCell = new RedCell();
-      redCell.setQuantity(rnd.nextInt(10000));
+      redCell.setQuantity(rnd.nextInt(3000));
       donation.setRedCells(redCell);
     }
   }

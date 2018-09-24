@@ -7,14 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aeda4e0-a2a3-4de2-930b-6e85db414a42" name="Default" comment="setup the user dashboard to work properly with vuetify">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12fadecc007d472d0989082a9048af4021f9f888" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/12fadecc007d472d0989082a9048af4021f9f888" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-ui/src/assets/img/blood-donation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-ui/src/assets/img/register-blood.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68340433c15968bc3c775f29e35230853bcb8a82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68340433c15968bc3c775f29e35230853bcb8a82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/951314cefd3c913962014723a01b29da9de0b5f4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/951314cefd3c913962014723a01b29da9de0b5f4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbe8961ea041b1f58db333a9a426b4ee1eca4e90" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbe8961ea041b1f58db333a9a426b4ee1eca4e90" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Events.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Events.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/split.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/split.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-ui/src/components/Progress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/components/Progress.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Overview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Signup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Signup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-ui/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/store/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,45 +46,49 @@
     <session id="1905778018">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="250" />
+          <entry key="java" value="262" />
+          <entry key="js" value="5" />
           <entry key="properties" value="5" />
-          <entry key="vue" value="3" />
-          <entry key="xhtml" value="1" />
+          <entry key="vue" value="23" />
+          <entry key="xhtml" value="3" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="250" />
+          <entry key="JAVA" value="262" />
+          <entry key="JavaScript" value="5" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="5" />
-          <entry key="Vue.js" value="2" />
-          <entry key="XHTML" value="1" />
+          <entry key="Vue.js" value="22" />
+          <entry key="XHTML" value="3" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6847" />
+          <entry key="java" value="6914" />
+          <entry key="js" value="3" />
           <entry key="properties" value="37" />
-          <entry key="vue" value="22" />
+          <entry key="vue" value="1185" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6847" />
+          <entry key="JAVA" value="6914" />
+          <entry key="JavaScript" value="3" />
           <entry key="Properties" value="37" />
-          <entry key="Vue.js" value="22" />
+          <entry key="Vue.js" value="1185" />
         </counts>
       </usages-collector>
     </session>
@@ -90,10 +99,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/UserAuthentication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="48" />
+            <state relative-caret-position="546">
+              <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -145,6 +154,7 @@
       <find>getter</find>
       <find>&lt;v-conten</find>
       <find>Donation</find>
+      <find>logger.info</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,18 +164,11 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/EventPostServiceImpl.java" />
-        <option value="$PROJECT_DIR$/user-ui/src/components/Header.vue" />
-        <option value="$PROJECT_DIR$/user-ui/src/router/index.js" />
-        <option value="$PROJECT_DIR$/user-ui/src/store.js" />
-        <option value="$PROJECT_DIR$/user-ui/src/pages/Dashboard.vue" />
-        <option value="$PROJECT_DIR$/user-ui/src/store/store.js" />
-        <option value="$PROJECT_DIR$/user-ui/src/store/utils.js" />
-        <option value="$PROJECT_DIR$/user-ui/src/store/index.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/models/EventPost.java" />
         <option value="$PROJECT_DIR$/user-ui/src/App.vue" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/security/Subscribable.java" />
@@ -207,8 +210,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/DonationListener.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mail-config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/DefaultTokenIssuer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" />
         <option value="$PROJECT_DIR$/user-ui/src/pages/Events.vue" />
+        <option value="$PROJECT_DIR$/user-ui/src/pages/Signup.vue" />
+        <option value="$PROJECT_DIR$/user-ui/src/pages/Login.vue" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/split.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" />
+        <option value="$PROJECT_DIR$/user-ui/src/components/Progress.vue" />
+        <option value="$PROJECT_DIR$/user-ui/src/pages/Overview.vue" />
+        <option value="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" />
+        <option value="$PROJECT_DIR$/user-ui/src/router/index.js" />
+        <option value="$PROJECT_DIR$/user-ui/src/store/index.js" />
       </list>
     </option>
   </component>
@@ -250,8 +261,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1200" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -279,7 +290,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -320,15 +330,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -339,7 +340,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="redhope" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
@@ -348,18 +349,89 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
+              <item name="redhope" type="462c0819:PsiDirectoryNode" />
+              <item name="user-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SONARLINT_ANALYSIS_RESULTS_SCOPE" value="VCS changed files" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="persistence.&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/resources/META-INF/persistence.xml&#10;event&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/pages/Events.vue&#10;.git&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/.gitignore&#10;store&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/store.js&#10;Login&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/pages/Login.vue&#10;map.s&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/map.svg&#10;persist&#9;ACTION&#9;ActivatePersistenceToolWindow&#10;svg&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/blood-drop.svg&#10;blood&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/blood-drop.svg&#10;web.xm&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/WEB-INF/web.xml" />
+    <property name="SearchEverywhereHistoryKey" value="actions&#9;null&#9;null&#10;persistence.&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/resources/META-INF/persistence.xml&#10;event&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/pages/Events.vue&#10;.git&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/.gitignore&#10;store&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/store.js&#10;Login&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/user-ui/src/pages/Login.vue&#10;map.s&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/map.svg&#10;persist&#9;ACTION&#9;ActivatePersistenceToolWindow&#10;svg&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/blood-drop.svg&#10;blood&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/resources/img/blood-drop.svg&#10;web.xm&#9;FILE&#9;file:///Users/mac/java-presentations/redhope/src/main/webapp/WEB-INF/web.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -375,10 +447,8 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.mql.redhope.domain.exceptions" />
-      <recent name="com.mql.redhope.buisness.impl" />
-      <recent name="com.mql.redhope.models" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/user-ui/src/store" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/user-ui/src/assets/img" />
@@ -392,8 +462,10 @@
       <recent name="com.mql.redhope.models" />
       <recent name="com.mql.redhope.web.admin" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/user-ui/src/store" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.mql.redhope.domain.exceptions" />
+      <recent name="com.mql.redhope.buisness.impl" />
+      <recent name="com.mql.redhope.models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -408,7 +480,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JBoss Server.Wildfly">
+  <component name="RunManager" selected="npm.dashboard">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -634,6 +706,7 @@
       <workItem from="1536664003904" duration="1469000" />
       <workItem from="1536757483235" duration="7720000" />
       <workItem from="1537267435304" duration="466000" />
+      <workItem from="1537340996134" duration="3604000" />
     </task>
     <task id="LOCAL-00001" summary="completed signup&#10;added login">
       <created>1521712252208</created>
@@ -660,7 +733,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203064000" />
+    <option name="totallyTimeSpent" value="209408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,9 +746,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4931677" visible="true" weight="0.22470714" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4931677" visible="true" weight="0.22896698" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.50560397" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
@@ -696,7 +768,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3279503" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32971996" />
       <window_info anchor="bottom" id="SonarLint" order="13" weight="0.32919255" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="15" />
@@ -717,6 +789,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -761,133 +859,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/json/JsonObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="194" column="11" selection-start-line="194" selection-start-column="11" selection-end-line="194" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/UserServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
-          <caret line="113" column="56" lean-forward="true" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/models/TEst.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Stock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/RedCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Platelet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="53" column="30" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Plasma.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/exceptions/StockException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/JAXRSConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Region.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Profile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="19" column="75" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/ScheduleServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="89" column="24" lean-forward="true" selection-start-line="89" selection-start-column="24" selection-end-line="89" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/impl/DonationDaoImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/DonationDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/ws/rs/core/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="924" column="40" selection-start-line="924" selection-start-column="40" selection-end-line="924" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/exceptions/StockExceptionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="295">
@@ -930,20 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/AdminServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="64" column="5" lean-forward="true" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/BloodType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -983,13 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ProfileDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1087,24 +1037,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="199" column="8" selection-start-line="199" selection-start-column="8" selection-end-line="199" selection-end-column="8" />
+        <state relative-caret-position="84">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-ui/src/pages/Events.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
+        <state relative-caret-position="589">
           <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/user-ui/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/pages/Signup.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="118" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/pages/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="24" column="99" lean-forward="true" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3255">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/templates/nav-layout.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="50" column="68" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/split.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/pages/Overview.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="181" column="3" lean-forward="true" selection-start-line="181" selection-start-column="3" selection-end-line="181" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="86" column="24" lean-forward="true" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="80" column="65" selection-start-line="80" selection-start-column="65" selection-end-line="80" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/buisness/impl/AdminServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/domain/models/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/components/Progress.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="48" />
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/components/Loader.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1322" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-ui/src/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/DonationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/ProfileDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/dao/RegionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/AdminAuthentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/UserAuthentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
         </state>
       </provider>
     </entry>

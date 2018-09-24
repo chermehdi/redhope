@@ -5,7 +5,7 @@ const container = document.querySelector('.container_wrapper')
 
 setTimeout(() => {
   loader.classList.add('disappear')
-}, 3000)
+}, 1000)
 
 left.addEventListener('mouseenter', () => {
   container.classList.add('left-hover')

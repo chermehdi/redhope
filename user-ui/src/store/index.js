@@ -177,7 +177,7 @@ export default new Vuex.Store({
         setTimeout(() => {
           context.commit('HIDE_LOADER')
           router.push({path: "/dashboard"})
-        }, 1000)
+        }, 500)
       }).catch(e => {
         // todo: display error messages here
         context.commit('HIDE_LOADER')

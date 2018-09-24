@@ -1,10 +1,11 @@
 
-Vsquid:S2629…"7Use the built-in formatting to construct this argument.(à·Ş£8İŸ¬œÄ,
-isquid:S1192S"FDefine a constant instead of duplicating this literal "Rabat" 3 times.(ğÁîúÿÿÿÿ8ùš”“İ,
-Usquid:S2629Z"7Use the built-in formatting to construct this argument.(ªëò8š±¯œÄ,
-dsquid:S1192a"FDefine a constant instead of duplicating this literal "mehdi" 4 times.(”Øî†8ÂšÖšÄ,
-csquid:UnusedPrivateMethod}"2Remove this unused private "createRegions" method.(É×±œÿÿÿÿÿ8š±¯œÄ,
-`squid:S3457…"AFormat specifiers should be used instead of string concatenation.(à·Ş£8İŸ¬œÄ,
-_squid:S3457Z"AFormat specifiers should be used instead of string concatenation.(ªëò8š±¯œÄ,
+`squid:S3457‡"AFormat specifiers should be used instead of string concatenation.(à·Ş£8İŸ¬œÄ,
+csquid:S1854Â"?Remove this useless assignment to local variable "regionRabat".(©Ò´Ùûÿÿÿÿ8èìù…ß,
+_squid:S3457\"AFormat specifiers should be used instead of string concatenation.(ªëò8š±¯œÄ,
 V
-squid:S106q"9Replace this use of System.out or System.err by a logger.(İæ´8ë« œÄ,
+squid:S106s"9Replace this use of System.out or System.err by a logger.(İæ´8ë« œÄ,
+Tsquid:S1481Â"0Remove this unused "regionRabat" local variable.(©Ò´Ùûÿÿÿÿ8èìù…ß,
+Usquid:S2629\"7Use the built-in formatting to construct this argument.(ªëò8š±¯œÄ,
+dsquid:S1192c"FDefine a constant instead of duplicating this literal "mehdi" 4 times.(”Øî†8ÂšÖšÄ,
+Vsquid:S2629‡"7Use the built-in formatting to construct this argument.(à·Ş£8İŸ¬œÄ,
+csquid:UnusedPrivateMethod"2Remove this unused private "createRegions" method.(É×±œÿÿÿÿÿ8š±¯œÄ,

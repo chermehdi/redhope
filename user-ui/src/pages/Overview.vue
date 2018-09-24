@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="side">
     </div>
-    <div class="content" v-if="overviewLoading">
+    <div class="content align-center" v-if="overviewLoading">
       <progress-bar/>
     </div>
     <div class="content" v-if="!overviewLoading">
@@ -12,7 +12,7 @@
           <div slot="title"><h3>Last Donation</h3></div>
           <div class="gen_info" slot="content">
             <div class="left">
-              <h5>1 month Ago</h5>
+              <h5>No donations yet</h5>
             </div>
             <div class="right">
               <img src="../assets/img/blood-drop.png" class="blood_drop" alt="redhope"/>
@@ -179,5 +179,8 @@
 
   .pp {
     width: 100%;
+  }
+  .align-center {
+    text-align: center;
   }
 </style>

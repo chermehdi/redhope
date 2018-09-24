@@ -78,9 +78,7 @@ public class AdminResource {
   @UserSecured
   @Path("by-region")
   public Response getUsersByRegion(RegionRequest request) {
-    logger.info(uriInfo.getPath() + " " + uriInfo.getBaseUri());
     List<User> usersMatchingRegion = adminService.getUsersMatchingRegion(request.getRegionName());
-    logger.info(request + " " + usersMatchingRegion);
     return Response.ok(usersMatchingRegion).build();
   }
 }

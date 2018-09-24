@@ -1,10 +1,10 @@
 
-bsquid:S3457"AFormat specifiers should be used instead of string concatenation.(ÎÓÈÀúÿÿÿÿ8¦Å‰Ş¿,
-R
-squid:S106"9Replace this use of System.out or System.err by a logger.(Şî´Èûÿÿÿÿ
-:squid:S1948"%Make "log" transient or serializable.(õÄ”¿
-Csquid:S1481")Remove this unused "user" local variable.(ıÏ«æşÿÿÿÿ
-Qsquid:S2629"7Use the built-in formatting to construct this argument.(ÎÓÈÀúÿÿÿÿ
-Gsquid:S1135"2Complete the task associated to this TODO comment.(Ì·Ÿ’
-Csquid:S1948")Make "userDto" transient or serializable.(¿šÇ‹üÿÿÿÿ
-Rsquid:S1854"8Remove this useless assignment to local variable "user".(ıÏ«æşÿÿÿÿ
+Esquid:S1948")Make "userDto" transient or serializable.(¿šÇ‹üÿÿÿÿ
+Isquid:S1135!"2Complete the task associated to this TODO comment.(Ì·Ÿ’
+Ssquid:S2629+"7Use the built-in formatting to construct this argument.(ÎÓÈÀúÿÿÿÿ
+<squid:S1948"%Make "log" transient or serializable.(õÄ”¿
+Tsquid:S1854""8Remove this useless assignment to local variable "user".(ıÏ«æşÿÿÿÿ
+dsquid:S3457+"AFormat specifiers should be used instead of string concatenation.(ÎÓÈÀúÿÿÿÿ8¦Å‰Ş¿,
+T
+squid:S106&"9Replace this use of System.out or System.err by a logger.(Şî´Èûÿÿÿÿ
+Esquid:S1481"")Remove this unused "user" local variable.(ıÏ«æşÿÿÿÿ

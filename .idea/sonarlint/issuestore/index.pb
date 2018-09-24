@@ -230,3 +230,13 @@ j
 :src/main/java/com/mql/redhope/domain/models/BloodType.java,f/f/ff34b7c8189127a2a20fe318cffd6b89121e3655
 [
 +src/main/resources/assets-config.properties,f/9/f98ecd87c87357e24d6b93978fd9705eefa271fe
+X
+(src/main/webapp/WEB-INF/faces-config.xml,9/2/921ab541b29cd2aba50bbba38a0af79890ebe16a
+S
+#src/main/webapp/resources/js/app.js,6/6/666e8d742590f20e5ddab8759896a938a40ac846
+U
+%src/main/webapp/resources/js/split.js,1/a/1a3e1ea92409a8e3f13053e988820070e885f2dd
+S
+#user-ui/src/components/Progress.vue,1/c/1cbffb28466403b72a03e3845a9dde123d61d346
+J
+user-ui/src/store/index.js,f/a/fa0deff50b954a9cf539c397a3686191d200ce3c

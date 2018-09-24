@@ -1,30 +1,48 @@
 <template>
-  <div class="container mgt">
-    <div class="row">
-      <div class="col-md-8 offset-md-2 card">
-        <h1 class="header__light">Complete Sign up information </h1>
-        <form action="#" @submit.prevent="register">
-          <div class="form-group">
-            <input type="text" v-model="firstName" placeholder="Your First Name"
-                   class="form-control">
+  <div class="login">
+    <div class="login__outer">
+      <div class="login__img"/>
+      <div class="login__form">
+        <h3 class="header">Registration Form</h3>
+        <form @submit.prevent="register">
+          <div class="field">
+            <v-text-field
+              v-model="firstName"
+              label="Your first name"
+              required
+            ></v-text-field>
           </div>
-          <div class="form-group">
-            <input type="text" v-model="lastName" placeholder="Your Last Name" class="form-control">
+          <div class="field">
+            <v-text-field
+              v-model="lastName"
+              label="Your last name"
+              required
+            ></v-text-field>
           </div>
-          <div class="form-group">
-            <input type="text" v-model="email" placeholder="Your Email" class="form-control">
+          <div class="field">
+            <v-text-field
+              v-model="email"
+              label="Your email"
+              required
+            ></v-text-field>
           </div>
-          <div class="form-group">
-            <input type="password" v-model="password" placeholder="Your Password"
-                   class="form-control">
+          <div class="field">
+            <v-text-field
+              v-model="password"
+              label="Your password"
+              type="password"
+              required
+            ></v-text-field>
           </div>
-          <div class="form-group">
-            <input type="submit" class="btn btn-primary btn-round text--white" value="Sign up">
+          <div class="field">
+            <v-btn color="blue" class="white__text" @click.native="register">Register</v-btn>
           </div>
         </form>
       </div>
+
     </div>
   </div>
+
 </template>
 <script>
   import {mapActions, mapMutations} from 'vuex'
@@ -53,34 +71,50 @@
   }
 </script>
 <style scoped>
-  h1 {
-    text-align: center;
+  @import "../assets/css/vuetify.min.css";
+
+  .login {
+    min-height: 100%;
+    margin-top: -7rem;
   }
 
-  .row {
+  .login__outer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  .login__img {
+    background: url(../assets/img/register-blood.jpg) center center no-repeat;
+    background-size: cover;
+  }
+
+  .login__form {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
   }
 
-  .card {
-    padding: 2rem;
-    border-radius: 1rem;
+  .login__form form {
+    width: 80%;
   }
 
-  .header__light {
-    font-weight: 300;
+  .field {
+    width: 100%;
   }
 
-  .btn-primary {
-    background: rgba(237, 37, 78, 1) !important;
+  h3.header {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 1rem 1rem;
   }
 
-  .form-control:focus {
-    border: 1px solid rgba(237, 37, 78, 1);
-  }
-
-  .mgt {
-    padding-top: 3rem;
+  .white__text {
+    color: white !important;
+    font-weight: bold !important;
   }
 </style>

@@ -15,6 +15,18 @@
     <version.jjwt>0.7.0</version.jjwt>
   </properties>
 
+  <developers>
+    <developer>
+      <email>mehdi.cheracher@gmail.com</email>
+      <name>cheracher mehdi</name>
+      <roles>
+        <role>developer</role>
+        <role>architect</role>
+        <role>maintainer</role>
+      </roles>
+    </developer>
+  </developers>
+
   <dependencies>
     <dependency>
       <groupId>javax</groupId>

@@ -7,19 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3aeda4e0-a2a3-4de2-930b-6e85db414a42" name="Default" comment="setup the user dashboard to work properly with vuetify">
-      <change afterPath="$PROJECT_DIR$/user-ui/src/assets/img/blood-donation.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-ui/src/assets/img/register-blood.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68340433c15968bc3c775f29e35230853bcb8a82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/68340433c15968bc3c775f29e35230853bcb8a82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/DataBaseSeeder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mql/redhope/web/admin/AdminResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/split.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/split.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/components/Progress.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/components/Progress.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Overview.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/pages/Signup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/pages/Signup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-ui/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/user-ui/src/store/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,10 +37,11 @@
         <counts>
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -102,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/UserAuthentication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="546">
-              <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -261,8 +251,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -290,6 +280,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,85 +292,7 @@
             <path>
               <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
               <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
-              <item name="redhope" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="redhope-admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="redhope" type="b2602c69:ProjectViewProjectNode" />
@@ -423,8 +337,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -435,7 +347,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536667218271" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537788358625" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -707,6 +619,7 @@
       <workItem from="1536757483235" duration="7720000" />
       <workItem from="1537267435304" duration="466000" />
       <workItem from="1537340996134" duration="3604000" />
+      <workItem from="1537788726286" duration="154000" />
     </task>
     <task id="LOCAL-00001" summary="completed signup&#10;added login">
       <created>1521712252208</created>
@@ -733,7 +646,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209408000" />
+    <option name="totallyTimeSpent" value="209562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,7 +660,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4931677" visible="true" weight="0.22896698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4931677" visible="true" weight="0.23109691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Persistence" order="2" sideWeight="0.50560397" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="3" />
@@ -1162,13 +1075,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user-ui/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/user-ui/src/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -1208,7 +1115,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/mql/redhope/web/beans/UserAuthentication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
-          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
         </state>
       </provider>
     </entry>
